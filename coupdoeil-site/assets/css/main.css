@@ -1,7 +1,7 @@
 :root {
 	color-scheme: light;
 
-	/* Palette principale à ajuster facilement */
+	/* Palette principale */
 	--hue-primary: #d64f59;
 	--hue-secondary: #5f7cf7;
 	--hue-accent: #f6ae2d;
@@ -61,6 +61,7 @@
 	--shadow-overlay: 0 16px 44px rgba(0, 0, 0, 0.22);
 
 	/* Espacements et rayons */
+	/* need adjustements for specific pages*/
 	--radius-sm: 10px;
 	--radius: 16px;
 	--spacing-xs: 8px;

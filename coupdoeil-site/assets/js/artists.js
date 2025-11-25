@@ -1,16 +1,23 @@
 const ARTISTS = [
-{ name: 'Lina Moreau', category: 'illustration', bio: 'Illustrations poétiques inspirées des cafés parisiens.', tags: ['encre', 'affiches'], link: '#', img: '../assets/img/artist1.jpg' },
-{ name: 'Atelier Sel & Terre', category: 'ceramique', bio: 'Petites séries d’objets en grès chamotté.', tags: ['grès', 'utilitaire'], link: '#', img: '../assets/img/artist2.jpg' },
-{ name: 'Noé Vidal', category: 'photo', bio: 'Photographie argentique autour de la ville sensible.', tags: ['argentique', 'urbain'], link: '#', img: '../assets/img/artist3.jpg' },
-{ name: 'Studio Louve', category: 'textile', bio: 'Accessoires textiles upcyclés aux couleurs chaudes.', tags: ['upcycling', 'teinture'], link: '#', img: '../assets/img/artist4.jpg' },
-{ name: 'Isis Laurent', category: 'bijoux', bio: 'Bijoux modulables en laiton et verre.', tags: ['laiton', 'modulaire'], link: '#', img: '../assets/img/artist5.jpg' },
-{ name: 'Canopée', category: 'illustration', bio: 'Posters botaniques peints à la gouache.', tags: ['botanique', 'gouache'], link: '#', img: '../assets/img/artist6.jpg' },
-{ name: 'Atelier Sillon', category: 'sculpture', bio: 'Sculptures bois minimalistes, hommage aux rivages.', tags: ['bois', 'minimal'], link: '#', img: '../assets/img/artist7.jpg' },
-{ name: 'Lueur Nord', category: 'photo', bio: 'Séries photo autour de la lumière boréale.', tags: ['lumière', 'voyage'], link: '#', img: '../assets/img/artist8.jpg' },
-{ name: 'Édith Cuir', category: 'artisanat', bio: 'Petite maroquinerie façonnée à la main.', tags: ['cuir', 'durable'], link: '#', img: '../assets/img/artist9.jpg' },
-{ name: 'Margo Pixel', category: 'digital', bio: 'Illustrations numériques oniriques.', tags: ['digital', 'surreal'], link: '#', img: '../assets/img/artist10.jpg' },
-{ name: 'Atelier Brume', category: 'textile', bio: 'Tissages muraux aux fibres naturelles.', tags: ['tissage', 'naturel'], link: '#', img: '../assets/img/artist11.jpg' },
-{ name: 'Noctis Verre', category: 'bijoux', bio: 'Pièces en verre soufflé aux reflets changeants.', tags: ['verre', 'soufflé'], link: '#', img: '../assets/img/artist12.jpg' }
+{ name: 'Atelier Sel & Terre', category: 'ceramique', bio: 'Petites séries d’objets en grès chamotté.', tags: ['grès', 'utilitaire'], link: '#', img: '../assets/img/artist1.xcf' },
+{ name: 'Nébuleuse Sonore', category: 'musique', bio: 'Live ambient et textures électroniques pour voyages introspectifs.', tags: ['ambient', 'electro', 'live'], link: '#', img: '../assets/img/artist2.xcf' },
+{ name: 'Studio Lune Noire', category: 'illustration', bio: 'Affiches oniriques inspirées de la nuit et des néons urbains.', tags: ['affiche', 'onirique', 'néon'], link: '#', img: '../assets/img/artist3.xcf' },
+{ name: 'Beat Bunker', category: 'musique', bio: 'Beats hip-hop lo-fi produits en direct sur pad.', tags: ['lofi', 'hip-hop', 'beatmaking'], link: '#', img: '../assets/img/artist4.xcf' },
+
+{ name: 'Ciel Brodé', category: 'textile', bio: 'Broderies fines autour des constellations et des mythes.', tags: ['broderie', 'constellation', 'slow-art'], link: '#', img: '../assets/img/artist5.xcf' },
+{ name: 'Lune de Vinyl', category: 'musique', bio: 'Sélection vinyle house & disco pour danser toute la soirée.', tags: ['dj-set', 'vinyle', 'house'], link: '#', img: '../assets/img/artist6.xcf' },
+{ name: 'Mains d’Encre', category: 'tatouage', bio: 'Flashs graphiques inspirés de la nature et du cyberpunk.', tags: ['flash', 'noir-et-gris', 'graphique'], link: '#', img: '../assets/img/artist7.xcf' },
+{ name: 'Chœur Indigo', category: 'musique', bio: 'Duo voix/guitare aux harmonies douces et mélancoliques.', tags: ['acoustique', 'indie', 'voix'], link: '#', img: '../assets/img/artist8.xcf' },
+
+{ name: 'Atelier Brut Bois', category: 'bois', bio: 'Objets du quotidien sculptés dans des essences locales.', tags: ['bois', 'fait-main', 'utilitaire'], link: '#', img: '../assets/img/artist9.xcf' },
+{ name: 'Studio Fractal', category: 'musique', bio: 'Expérimentations modulaires entre bruit, rythme et mélodie.', tags: ['modulaire', 'expérimental', 'synthé'], link: '#', img: '../assets/img/artist10.xcf' },
+{ name: 'Pixel & Papier', category: 'illustration', bio: 'Illustrations colorées mêlant digital et crayon traditionnel.', tags: ['digital', 'sketch', 'couleur'], link: '#', img: '../assets/img/artist11.xcf' },
+{ name: 'Nuit Chromatique', category: 'musique', bio: 'Sets drum & bass énergiques pour les noctambules.', tags: ['drum-and-bass', 'dj-set', 'énergie'], link: '#', img: '../assets/img/artist12.xcf' },
+
+{ name: 'Météore Studio', category: 'photo', bio: 'Séries photo argentiques sur la nuit en ville.', tags: ['argentique', 'urbain', 'noir-et-blanc'], link: '#', img: '../assets/img/artist13.xcf' },
+{ name: 'Café Réverb', category: 'musique', bio: 'Chill hop et downtempo pour une ambiance cosy.', tags: ['chillhop', 'downtempo', 'background'], link: '#', img: '../assets/img/artist14.xcf' },
+{ name: 'Club Pixelwave', category: 'musique', bio: 'Electro-pop lumineuse inspirée des jeux vidéo et du rétro-futur.', tags: ['electro-pop', 'chiptune', 'live'], link: '#', img: '../assets/img/artist15.xcf' },
+{ name: 'Orage Doux', category: 'musique', bio: 'Post-rock instrumental aux montées lentes et intenses.', tags: ['post-rock', 'instrumental', 'guitare'], link: '#', img: '../assets/img/artist16.xcf' },
 ];
 
 (() => {
