@@ -1,0 +1,128 @@
+.form-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: var(--spacing);
+	align-items: start;
+}
+
+form {
+	display: grid;
+	gap: var(--spacing-sm);
+}
+
+.form-group {
+	display: grid;
+	gap: 6px;
+	margin-bottom: var(--spacing-sm);
+}
+
+label {
+	font-weight: 800;
+	color: var(--color-text);
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+	padding: 12px 14px;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--color-border);
+	font-size: 1rem;
+	background: var(--color-surface);
+	transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+	border-color: var(--color-primary);
+	box-shadow: var(--focus-ring);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.helper {
+	color: var(--color-muted);
+	font-size: 0.92rem;
+}
+
+.error {
+	color: var(--color-error);
+	font-size: 0.9rem;
+}
+
+.success {
+	color: var(--color-success);
+	font-size: 0.9rem;
+}
+
+.form-actions {
+	display: flex;
+	gap: var(--spacing-sm);
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.checkbox-inline {
+	display: flex;
+	gap: var(--spacing-xs);
+	align-items: flex-start;
+}
+
+input[type="file"] {
+	padding: 10px;
+	background: var(--color-surface-muted);
+}
+
+.preview-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: var(--spacing-sm);
+}
+
+.preview-grid img {
+	height: 120px;
+	object-fit: cover;
+	border-radius: var(--radius-sm);
+	border: 1px solid var(--color-border);
+}
+
+.notice {
+	background: var(--color-highlight);
+	border: 1px solid var(--color-border);
+	padding: var(--spacing-sm);
+	border-radius: var(--radius);
+}
+
+.status {
+	padding: var(--spacing-sm);
+	border-radius: var(--radius-sm);
+	background: var(--color-success-bg);
+	border: 1px solid var(--color-success-border);
+	color: var(--color-success);
+}
+
+input.is-invalid,
+select.is-invalid,
+textarea.is-invalid {
+	border-color: var(--color-error);
+	background: var(--color-error-bg);
+}
+
+input.is-valid,
+select.is-valid,
+textarea.is-valid {
+	border-color: var(--color-success);
+	background: var(--color-success-weak);
+}
+
+.badge.small {
+	font-size: 0.78rem;
+	padding: 4px 10px;
+}

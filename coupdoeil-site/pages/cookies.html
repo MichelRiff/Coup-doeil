@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookies – Coup d'Oeil</title>
+<meta name="description" content="Politique cookies du site Coup d'Oeil : types de cookies, choix des visiteurs.">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/forms.css">
+</head>
+<body>
+	<a class="skip-link" href="#contenu">Aller au contenu</a>
+		<header>
+		<div class="navbar" role="navigation" aria-label="Navigation principale">
+			<a class="logo" href="../index.html">Coup d'Oeil</a>
+				<nav>
+					<ul class="nav-links">
+						<li><a data-page="index.html" href="../index.html">Accueil</a></li>
+						<li><a data-page="pages/about.html" href="about.html">À propos</a></li>
+						<li><a data-page="pages/events.html" href="events.html">Éditions</a></li>
+						<li><a data-page="pages/artists.html" href="artists.html">Artistes</a></li>
+						<li><a data-page="pages/contact.html" href="contact.html">Contact</a></li>
+						<li><a data-page="pages/legal.html" href="legal.html">Mentions légales</a></li>
+					</ul>
+				</nav>
+				<div class="nav-actions">
+					<button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+						<span aria-hidden="true">🌞</span>
+						<span data-theme-label>Mode clair</span>
+					</button>
+					<a class="btn" href="register-artist.html">S'inscrire</a>
+					</div>
+				</div>
+			</header>
+			<main id="contenu">
+				<section class="section">
+					<h1>Cookies</h1>
+					<p>Ce site utilise uniquement des cookies techniques nécessaires et une mesure d'audience locale optionnelle.</p>
+					<div class="card-grid">
+						<div class="card">
+							<h3>Cookies techniques</h3>
+							<p>Permettent de mémoriser vos préférences (bandeau cookies accepté ou refusé) directement dans votre navigateur.</p>
+						</div>
+						<div class="card">
+							<h3>Mesure d'audience</h3>
+							<p>Une mesure locale anonymisée peut être activée pour comprendre l'utilisation des pages. Vous pouvez la refuser via le bandeau.</p>
+						</div>
+						<div class="card">
+							<h3>Gérer vos choix</h3>
+							<p>Utilisez le bouton ci-dessous pour réinitialiser vos préférences et revoir le bandeau.</p>
+							<button class="btn secondary" onclick="localStorage.removeItem('coupdoeil_cookies');location.reload();">Réinitialiser</button>
+							</div>
+						</div>
+					</section>
+				</main>
+				<footer>
+					<div class="footer-content">
+						<div>
+							<h3>Coup d'Oeil</h3>
+							<p>Marchés de créateurs organisés à Ynov pour valoriser les talents émergents.</p>
+						</div>
+						<div>
+							<h4>Ressources</h4>
+							<ul>
+								<li><a href="about.html">À propos</a></li>
+								<li><a href="events.html">Éditions</a></li>
+								<li><a href="artists.html">Artistes</a></li>
+							</ul>
+						</div>
+						<div>
+							<h4>Légal</h4>
+							<ul>
+								<li><a href="legal.html">Mentions légales</a></li>
+								<li><a href="privacy.html">Confidentialité</a></li>
+								<li><a href="cookies.html">Cookies</a></li>
+							</ul>
+						</div>
+						<div>
+							<h4>Contact</h4>
+							<ul>
+								<li><a href="contact.html">Écrire à l'équipe</a></li>
+								<li><a href="mailto:coupdoeil@ynov.fr">coupdoeil@ynov.fr</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer-bottom">© 2025 Coup d'Oeil · Événement interne Ynov.</div>
+					</footer>
+					<script src="../assets/js/main.js"></script>
+				</body>
+			</html>

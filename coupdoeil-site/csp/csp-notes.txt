@@ -1,0 +1,17 @@
+Proposition CSP stricte pour déploiement :
+Content-Security-Policy:
+default-src 'self';
+img-src 'self' data:;
+script-src 'self';
+style-src 'self';
+font-src 'self';
+base-uri 'self';
+form-action 'self';
+frame-ancestors 'none';
+object-src 'none';
+upgrade-insecure-requests;
+
+Notes:
+- Aucune ressource externe requise, les polices utilisent la stack système.
+- Les formulaires sont statiques : vérifier les redirections éventuelles côté hébergeur.
+- Ajouter un rapport de violation (report-to) si l'infrastructure le permet.
