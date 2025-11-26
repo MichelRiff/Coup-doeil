@@ -1,215 +1,355 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inscriptions – Coup d'Oeil</title>
-<meta name="description" content="Formulaire unique pour les artistes et les visiteurs des éditions Coup d'Oeil.">
-<link rel="stylesheet" href="../assets/css/main.css">
-<link rel="stylesheet" href="../assets/css/forms.css">
-</head>
-<body>
-	<a class="skip-link" href="#contenu">Aller au contenu</a>
-		<header>
-		<div class="navbar" role="navigation" aria-label="Navigation principale">
-			<a class="logo" href="../index.html">Coup d'Oeil</a>
-				<nav>
-					<ul class="nav-links">
-						<li><a data-page="index.html" href="../index.html">Accueil</a></li>
-						<li><a data-page="pages/about.html" href="about.html">À propos</a></li>
-						<li><a data-page="pages/events.html" href="events.html">Éditions</a></li>
-						<li><a data-page="pages/artists.html" href="artists.html">Artistes</a></li>
-						<li><a data-page="pages/contact.html" href="contact.html">Contact</a></li>
-						<li><a data-page="pages/legal.html" href="legal.html">Mentions légales</a></li>
-					</ul>
-				</nav>
-				<div class="nav-actions">
-					<button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-						<span aria-hidden="true">🌞</span>
-						<span data-theme-label>Mode clair</span>
-					</button>
-					<a class="btn" href="register-artist.html">S'inscrire</a>
-					</div>
-				</div>
-			</header>
-			<main id="contenu">
-				<section class="hero">
-					<div>
-						<p class="badge">Inscriptions</p>
-						<h1>Choisissez comment participer</h1>
-						<p>Ce module unique rassemble les demandes artiste et visiteur. Basculez entre les formulaires selon votre profil et gardez une trace locale de votre candidature.</p>
-					</div>
-					<div class="hero-visual">
-						<p class="highlight">Vos données restent dans votre navigateur tant que l'équipe n'a pas validé votre inscription. Vous pouvez revenir modifier ou ré-envoyer vos informations à tout moment.</p>
-					</div>
-				</section>
-				<section class="section" data-form-switch data-default="artist">
-					<div class="registration-toggle" role="group" aria-label="Choisir votre formulaire">
-						<button type="button" class="registration-toggle__btn is-active" data-toggle-target="artist" aria-pressed="true">
-							<span>Je suis artiste</span>
-							<small>Stand, logistique et visuels</small>
-						</button>
-						<button type="button" class="registration-toggle__btn" data-toggle-target="visitor" aria-pressed="false">
-							<span>Je suis visiteur</span>
-							<small>Infos pratiques et rappels</small>
-						</button>
-					</div>
-					<div class="form-panel" data-form-panel="artist">
-						<div class="form-panel__intro">
-							<p class="badge small">Artistes</p>
-							<h2 id="artist-form-title">Déposez votre dossier</h2>
-							<p>Présentez votre univers, vos besoins et vos liens. L'équipe vous recontactera après revue.</p>
-						</div>
-						<form data-form="artist" class="form-grid" aria-labelledby="artist-form-title" data-endpoint="https://formsubmit.co/ajax/eventcoupdoeil@ynov.fr" data-subject="Nouvelle candidature artiste – Coup d'Oeil">
-							<div class="form-group">
-								<label for="firstname">Prénom</label>
-								<input type="text" id="firstname" name="firstname" required>
-							</div>
-							<div class="form-group">
-								<label for="lastname">Nom</label>
-								<input type="text" id="lastname" name="lastname" required>
-							</div>
-							<div class="form-group">
-								<label for="email">Email</label>
-								<input type="email" id="email" name="email" required>
-							</div>
-							<div class="form-group">
-								<label for="status">Statut</label>
-								<select id="status" name="status">
-									<option value="Indépendant">Indépendant</option>
-									<option value="Professionnel">Professionnel</option>
-									<option value="Étudiant Ynov">Étudiant Ynov</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="discipline">Pôle artistique</label>
-								<select id="discipline" name="discipline" required>
-									<option value="">Choisir</option>
-									<option value="Illustration">Illustration</option>
-									<option value="Bijoux">Bijoux</option>
-									<option value="Photo">Photo</option>
-									<option value="Textile">Textile</option>
-									<option value="Musique">Musique</option>
-									<option value="Artisanat">Artisanat</option>
-									<option value="Autre">Autre</option>
-								</select>
-							</div>
-							<div class="form-group" style="grid-column: 1 / -1;">
-								<label for="description">Description courte</label>
-								<textarea id="description" name="description" rows="4" required></textarea>
-							</div>
-							<div class="form-group">
-								<label for="portfolio">Lien portfolio ou Instagram</label>
-								<input type="url" id="portfolio" name="portfolio" placeholder="https://">
-								<p class="helper">Optionnel mais recommandé.</p>
-							</div>
-							<div class="form-group">
-								<label for="images">Images (simulation)</label>
-								<input type="file" id="images" name="images" accept="image/*" multiple>
-								<div class="preview-grid" data-preview></div>
-							</div>
-							<div class="form-group" style="grid-column: 1 / -1;">
-								<span>Besoin logistiques</span>
-								<div class="checkbox-list">
-									<label class="checkbox-inline"><input type="checkbox" name="logistics" value="Table">Table</label>
-									<label class="checkbox-inline"><input type="checkbox" name="logistics" value="Prise électrique">Prise électrique</label>
-									<label class="checkbox-inline"><input type="checkbox" name="logistics" value="Lumière">Lumière</label>
-								</div>
-							</div>
-							<div class="form-group" style="grid-column: 1 / -1;">
-								<label class="checkbox-inline">
-								<input type="checkbox" name="consent" required>
-								<span>J'accepte le traitement de mes informations par l'équipe Coup d'Oeil et j'autorise l'usage de mes images pour la communication de l'événement.</span>
-							</label>
-							</div>
-							<div class="form-group" aria-hidden="true" hidden>
-								<label for="website">Laissez ce champ vide</label>
-								<input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-							</div>
-							<div class="form-actions">
-								<button class="btn" type="submit">Envoyer la candidature</button>
-								<p class="helper">Vous recevrez un email récapitulatif lors de la validation.</p>
-							</div>
-							<p data-status class="status" aria-live="polite"></p>
-						</form>
-					</div>
-					<div class="form-panel" data-form-panel="visitor" hidden>
-						<div class="form-panel__intro">
-							<p class="badge small">Visiteurs</p>
-							<h2 id="visitor-form-title">Annoncez votre venue</h2>
-							<p>Recevez les rappels pratiques en amont des différentes éditions et aidez-nous à dimensionner l'accueil.</p>
-						</div>
-						<form data-form="visitor" class="form-grid" aria-labelledby="visitor-form-title" data-endpoint="https://formsubmit.co/ajax/eventcoupdoeil@ynov.fr" data-subject="Nouvelle inscription visiteur – Coup d'Oeil">
-							<div class="form-group">
-								<label for="visitor-name">Nom complet</label>
-								<input type="text" id="visitor-name" name="name" required>
-							</div>
-							<div class="form-group">
-								<label for="visitor-email">Email</label>
-								<input type="email" id="visitor-email" name="email" required>
-							</div>
-							<div class="form-group" style="grid-column: 1 / -1;">
-								<span>Éditions prévues</span>
-								<div class="checkbox-list">
-									<label class="checkbox-inline"><input type="checkbox" name="editions" value="Noel">Marché de Noël</label>
-									<label class="checkbox-inline"><input type="checkbox" name="editions" value="Printemps">Édition Printemps</label>
-									<label class="checkbox-inline"><input type="checkbox" name="editions" value="Final">Marché final</label>
-								</div>
-							</div>
-							<div class="form-group">
-								<label class="checkbox-inline">
-									<input type="checkbox" name="newsletter">
-									<span>Recevoir la newsletter et les rappels logistiques.</span>
-								</label>
-							</div>
-							<div class="form-group" style="grid-column: 1 / -1;">
-								<label class="checkbox-inline">
-									<input type="checkbox" name="consent" required>
-									<span>J'accepte le traitement de mes informations pour recevoir les communications de Coup d'Oeil.</span>
-								</label>
-							</div>
-							<div class="form-actions">
-								<button class="btn" type="submit">Valider mon inscription</button>
-								<p class="helper">Le suivi reste enregistré uniquement sur cet appareil.</p>
-							</div>
-							<p data-status class="status" aria-live="polite"></p>
-						</form>
-					</div>
-				</section>
-			</main>
-			<footer>
-				<div class="footer-content">
-					<div>
-						<h3>Coup d'Oeil</h3>
-						<p>Marchés de créateurs organisés à Ynov pour valoriser les talents émergents.</p>
-					</div>
-					<div>
-						<h4>Ressources</h4>
-						<ul>
-							<li><a href="about.html">À propos</a></li>
-							<li><a href="events.html">Éditions</a></li>
-							<li><a href="artists.html">Artistes</a></li>
-						</ul>
-					</div>
-					<div>
-						<h4>Légal</h4>
-						<ul>
-							<li><a href="legal.html">Mentions légales</a></li>
-							<li><a href="privacy.html">Confidentialité</a></li>
-							<li><a href="cookies.html">Cookies</a></li>
-						</ul>
-					</div>
-					<div>
-						<h4>Contact</h4>
-						<ul>
-							<li><a href="contact.html">Écrire à l'équipe</a></li>
-							<li><a href="mailto:eventcoupdoeil@ynov.fr">eventcoupdoeil@gmail.com</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer-bottom">© 2025 Coup d'Oeil · Événement interne Ynov.</div>
-				</footer>
-				<script src="../assets/js/main.js"></script>
-				<script src="../assets/js/forms.js"></script>
-			</body>
-		</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscriptions – Coup d'Oeil</title>
+    <meta
+      name="description"
+      content="Formulaire unique pour les artistes et les visiteurs des éditions Coup d'Oeil."
+    />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/forms.css" />
+    <link rel="icon" href="assets/img/FAVICON_COUP_OEIL-01.png" type="image/x-icon" />  
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header>
+      <div class="navbar" role="navigation" aria-label="Navigation principale">
+        <a class="logo" href="../index.html">
+          <img
+            src="../assets/img/LOGOS_COUP_DOEIL.png"
+            alt="Logo Coup d'Oeil"
+            decoding="async"
+          />
+          <span class="sr-only">Coup d'Oeil</span>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a data-page="index.html" href="../index.html">Accueil</a></li>
+            <li>
+              <a data-page="pages/about.html" href="about.html">À propos</a>
+            </li>
+            <li>
+              <a data-page="pages/events.html" href="events.html">Éditions</a>
+            </li>
+            <li>
+              <a data-page="pages/artists.html" href="artists.html">Artistes</a>
+            </li>
+            <li>
+              <a data-page="pages/contact.html" href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a data-page="pages/legal.html" href="legal.html"
+                >Mentions légales</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-pressed="false"
+          >
+            <span aria-hidden="true">🌞</span>
+            <span data-theme-label>Mode clair</span>
+          </button>
+          <a class="btn" href="register-artist.html">S'inscrire</a>
+        </div>
+      </div>
+    </header>
+    <main id="contenu">
+      <section class="hero">
+        <div>
+          <p class="badge">Inscriptions</p>
+          <h1>Choisissez comment participer</h1>
+          <p>
+            Ce module unique rassemble les demandes artiste et visiteur.
+            Basculez entre les formulaires selon votre profil et gardez une
+            trace locale de votre candidature.
+          </p>
+        </div>
+        <div class="hero-visual">
+          <p class="highlight">
+            Vos données restent dans votre navigateur tant que l'équipe n'a pas
+            validé votre inscription. Vous pouvez revenir modifier ou ré-envoyer
+            vos informations à tout moment.
+          </p>
+        </div>
+      </section>
+      <section class="section" data-form-switch data-default="artist">
+        <div
+          class="registration-toggle"
+          role="group"
+          aria-label="Choisir votre formulaire"
+        >
+          <button
+            type="button"
+            class="registration-toggle__btn is-active"
+            data-toggle-target="artist"
+            aria-pressed="true"
+          >
+            <span>Je suis artiste</span>
+            <small>Stand, logistique et visuels</small>
+          </button>
+          <button
+            type="button"
+            class="registration-toggle__btn"
+            data-toggle-target="visitor"
+            aria-pressed="false"
+          >
+            <span>Je suis visiteur</span>
+            <small>Infos pratiques et rappels</small>
+          </button>
+        </div>
+        <div class="form-panel" data-form-panel="artist">
+          <div class="form-panel__intro">
+            <p class="badge small">Artistes</p>
+            <h2 id="artist-form-title">Déposez votre dossier</h2>
+            <p>
+              Présentez votre univers, vos besoins et vos liens. L'équipe vous
+              recontactera après revue.
+            </p>
+          </div>
+          <form
+            data-form="artist"
+            class="form-grid"
+            aria-labelledby="artist-form-title"
+            data-endpoint="https://formsubmit.co/ajax/eventcoupdoeil@ynov.fr"
+            data-subject="Nouvelle candidature artiste – Coup d'Oeil"
+          >
+            <div class="form-group">
+              <label for="firstname">Prénom</label>
+              <input type="text" id="firstname" name="firstname" required />
+            </div>
+            <div class="form-group">
+              <label for="lastname">Nom</label>
+              <input type="text" id="lastname" name="lastname" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="status">Statut</label>
+              <select id="status" name="status">
+                <option value="Indépendant">Indépendant</option>
+                <option value="Professionnel">Professionnel</option>
+                <option value="Étudiant Ynov">Étudiant Ynov</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="discipline">Pôle artistique</label>
+              <select id="discipline" name="discipline" required>
+                <option value="">Choisir</option>
+                <option value="Illustration">Illustration</option>
+                <option value="Bijoux">Bijoux</option>
+                <option value="Photo">Photo</option>
+                <option value="Textile">Textile</option>
+                <option value="Musique">Musique</option>
+                <option value="Artisanat">Artisanat</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1">
+              <label for="description">Description courte</label>
+              <textarea
+                id="description"
+                name="description"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="portfolio">Lien portfolio ou Instagram</label>
+              <input
+                type="url"
+                id="portfolio"
+                name="portfolio"
+                placeholder="https://"
+              />
+              <p class="helper">Optionnel mais recommandé.</p>
+            </div>
+            <div class="form-group">
+              <label for="images">Images (simulation)</label>
+              <input
+                type="file"
+                id="images"
+                name="images"
+                accept="image/*"
+                multiple
+              />
+              <div class="preview-grid" data-preview></div>
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1">
+              <span>Besoin logistiques</span>
+              <div class="checkbox-list">
+                <label class="checkbox-inline"
+                  ><input
+                    type="checkbox"
+                    name="logistics"
+                    value="Table"
+                  />Table</label
+                >
+                <label class="checkbox-inline"
+                  ><input
+                    type="checkbox"
+                    name="logistics"
+                    value="Prise électrique"
+                  />Prise électrique</label
+                >
+                <label class="checkbox-inline"
+                  ><input
+                    type="checkbox"
+                    name="logistics"
+                    value="Lumière"
+                  />Lumière</label
+                >
+              </div>
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1">
+              <label class="checkbox-inline">
+                <input type="checkbox" name="consent" required />
+                <span
+                  >J'accepte le traitement de mes informations par l'équipe Coup
+                  d'Oeil et j'autorise l'usage de mes images pour la
+                  communication de l'événement.</span
+                >
+              </label>
+            </div>
+            <div class="form-group" aria-hidden="true" hidden>
+              <label for="website">Laissez ce champ vide</label>
+              <input
+                type="text"
+                id="website"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+            <div class="form-actions">
+              <button class="btn" type="submit">Envoyer la candidature</button>
+              <p class="helper">
+                Vous recevrez un email récapitulatif lors de la validation.
+              </p>
+            </div>
+            <p data-status class="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="form-panel" data-form-panel="visitor" hidden>
+          <div class="form-panel__intro">
+            <p class="badge small">Visiteurs</p>
+            <h2 id="visitor-form-title">Annoncez votre venue</h2>
+            <p>
+              Recevez les rappels pratiques en amont des différentes éditions et
+              aidez-nous à dimensionner l'accueil.
+            </p>
+          </div>
+          <form
+            data-form="visitor"
+            class="form-grid"
+            aria-labelledby="visitor-form-title"
+            data-endpoint="https://formsubmit.co/ajax/eventcoupdoeil@ynov.fr"
+            data-subject="Nouvelle inscription visiteur – Coup d'Oeil"
+          >
+            <div class="form-group">
+              <label for="visitor-name">Nom complet</label>
+              <input type="text" id="visitor-name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="visitor-email">Email</label>
+              <input type="email" id="visitor-email" name="email" required />
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1">
+              <span>Éditions prévues</span>
+              <div class="checkbox-list">
+                <label class="checkbox-inline"
+                  ><input type="checkbox" name="editions" value="Noel" />Marché
+                  de Noël</label
+                >
+                <label class="checkbox-inline"
+                  ><input
+                    type="checkbox"
+                    name="editions"
+                    value="Printemps"
+                  />Édition Printemps</label
+                >
+                <label class="checkbox-inline"
+                  ><input type="checkbox" name="editions" value="Final" />Marché
+                  final</label
+                >
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="checkbox-inline">
+                <input type="checkbox" name="newsletter" />
+                <span>Recevoir la newsletter et les rappels logistiques.</span>
+              </label>
+            </div>
+            <div class="form-group" style="grid-column: 1 / -1">
+              <label class="checkbox-inline">
+                <input type="checkbox" name="consent" required />
+                <span
+                  >J'accepte le traitement de mes informations pour recevoir les
+                  communications de Coup d'Oeil.</span
+                >
+              </label>
+            </div>
+            <div class="form-actions">
+              <button class="btn" type="submit">Valider mon inscription</button>
+              <p class="helper">
+                Le suivi reste enregistré uniquement sur cet appareil.
+              </p>
+            </div>
+            <p data-status class="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div>
+          <h3>Coup d'Oeil</h3>
+          <p>
+            Marchés de créateurs organisés à Ynov pour valoriser les talents
+            émergents.
+          </p>
+        </div>
+        <div>
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="events.html">Éditions</a></li>
+            <li><a href="artists.html">Artistes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="legal.html">Mentions légales</a></li>
+            <li><a href="privacy.html">Confidentialité</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Écrire à l'équipe</a></li>
+            <li>
+              <a href="mailto:eventcoupdoeil@ynov.fr"
+                >eventcoupdoeil@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Coup d'Oeil · Événement interne Ynov.
+      </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/forms.js"></script>
+  </body>
+</html>

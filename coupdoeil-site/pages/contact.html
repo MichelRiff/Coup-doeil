@@ -1,115 +1,158 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact – Coup d'Oeil</title>
-<meta name="description" content="Contactez l'équipe Coup d'Oeil pour les questions, partenariats ou presse.">
-<link rel="stylesheet" href="../assets/css/main.css">
-<link rel="stylesheet" href="../assets/css/forms.css">
-</head>
-<body>
-	<a class="skip-link" href="#contenu">Aller au contenu</a>
-		<header>
-		<div class="navbar" role="navigation" aria-label="Navigation principale">
-			<a class="logo" href="../index.html">Coup d'Oeil</a>
-				<nav>
-					<ul class="nav-links">
-						<li><a data-page="index.html" href="../index.html">Accueil</a></li>
-						<li><a data-page="pages/about.html" href="about.html">À propos</a></li>
-						<li><a data-page="pages/events.html" href="events.html">Éditions</a></li>
-						<li><a data-page="pages/artists.html" href="artists.html">Artistes</a></li>
-						<li><a data-page="pages/contact.html" href="contact.html">Contact</a></li>
-						<li><a data-page="pages/legal.html" href="legal.html">Mentions légales</a></li>
-					</ul>
-				</nav>
-				<div class="nav-actions">
-					<button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-						<span aria-hidden="true">🌞</span>
-						<span data-theme-label>Mode clair</span>
-					</button>
-					<a class="btn" href="register-artist.html">S'inscrire</a>
-					</div>
-				</div>
-			</header>
-			<main id="contenu">
-				<section class="hero">
-					<div>
-						<p class="badge">Contact</p>
-						<h1>Échanger avec l'équipe</h1>
-						<p>Une question sur le marché, une demande presse, une envie de partenariat ? Écrivez-nous.</p>
-					</div>
-					<div class="hero-visual">
-						<p class="highlight">Les formulaires sont statiques et ne transmettent aucune donnée. Utilisez vos vraies informations uniquement si vous souhaitez être recontacté.</p>
-					</div>
-				</section>
-				<section class="section">
-					<div class="section-header">
-						<h2>Formulaire de contact</h2>
-					</div>
-					<form class="form-grid">
-						<div class="form-group">
-							<label for="name">Nom complet</label>
-							<input id="name" type="text" placeholder="Votre nom">
-							<p class="helper">Indiquez l'équipe ou le rôle le cas échéant.</p>
-						</div>
-						<div class="form-group">
-							<label for="email">Email</label>
-							<input id="email" type="email" placeholder="votrenom@mail.fr">
-						</div>
-						<div class="form-group">
-							<label for="topic">Sujet</label>
-							<select id="topic">
-								<option>Question générale</option>
-								<option>Partenariat</option>
-								<option>Presse</option>
-								<option>Inscription</option>
-								<option>Autre</option>
-							</select>
-						</div>
-						<div class="form-group" style="grid-column: 1 / -1;">
-							<label for="message">Message</label>
-							<textarea id="message" rows="4" placeholder="Décrivez votre besoin"></textarea>
-							</div>
-							<div class="form-actions">
-								<button class="btn" type="button">Envoyer</button>
-									<p class="helper">Réponse sous 48h ouvrées.</p>
-								</div>
-							</form>
-						</section>
-					</main>
-					<footer>
-						<div class="footer-content">
-							<div>
-								<h3>Coup d'Oeil</h3>
-								<p>Marchés de créateurs pour valoriser les talents émergents.</p>
-							</div>
-							<div>
-								<h4>Ressources</h4>
-								<ul>
-									<li><a href="about.html">À propos</a></li>
-									<li><a href="events.html">Éditions</a></li>
-									<li><a href="artists.html">Artistes</a></li>
-								</ul>
-							</div>
-							<div>
-								<h4>Légal</h4>
-								<ul>
-									<li><a href="legal.html">Mentions légales</a></li>
-									<li><a href="privacy.html">Confidentialité</a></li>
-									<li><a href="cookies.html">Cookies</a></li>
-								</ul>
-							</div>
-							<div>
-								<h4>Contact</h4>
-								<ul>
-									<li><a href="contact.html">Écrire à l'équipe</a></li>
-									<li><a href="mailto:eventcoupdoeil@ynov.fr">eventcoupdoeil@gmail.com</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="footer-bottom">© 2025 Coup d'Oeil · Événement.</div>
-						</footer>
-						<script src="../assets/js/main.js"></script>
-					</body>
-				</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Coup d'Oeil</title>
+    <meta
+      name="description"
+      content="Contactez l'équipe Coup d'Oeil pour les questions, partenariats ou presse."
+    />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/forms.css" />
+    <link rel="icon" href="assets/img/FAVICON_COUP_OEIL-01.png" type="image/x-icon" />  
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header>
+      <div class="navbar" role="navigation" aria-label="Navigation principale">
+        <a class="logo" href="../index.html">
+          <img
+            src="../assets/img/LOGOS_COUP_DOEIL.png"
+            alt="Logo Coup d'Oeil"
+            decoding="async"
+          />
+          <span class="sr-only">Coup d'Oeil</span>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a data-page="index.html" href="../index.html">Accueil</a></li>
+            <li>
+              <a data-page="pages/about.html" href="about.html">À propos</a>
+            </li>
+            <li>
+              <a data-page="pages/events.html" href="events.html">Éditions</a>
+            </li>
+            <li>
+              <a data-page="pages/artists.html" href="artists.html">Artistes</a>
+            </li>
+            <li>
+              <a data-page="pages/contact.html" href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a data-page="pages/legal.html" href="legal.html"
+                >Mentions légales</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-pressed="false"
+          >
+            <span aria-hidden="true">🌞</span>
+            <span data-theme-label>Mode clair</span>
+          </button>
+          <a class="btn" href="register-artist.html">S'inscrire</a>
+        </div>
+      </div>
+    </header>
+    <main id="contenu">
+      <section class="hero">
+        <div>
+          <p class="badge">Contact</p>
+          <h1>Échanger avec l'équipe</h1>
+          <p>
+            Une question sur le marché, une demande presse, une envie de
+            partenariat ? Écrivez-nous.
+          </p>
+        </div>
+        <div class="hero-visual">
+          <p class="highlight">
+            Les formulaires sont statiques et ne transmettent aucune donnée.
+            Utilisez vos vraies informations uniquement si vous souhaitez être
+            recontacté.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-header">
+          <h2>Formulaire de contact</h2>
+        </div>
+        <form class="form-grid">
+          <div class="form-group">
+            <label for="name">Nom complet</label>
+            <input id="name" type="text" placeholder="Votre nom" />
+            <p class="helper">Indiquez l'équipe ou le rôle le cas échéant.</p>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="votrenom@mail.fr" />
+          </div>
+          <div class="form-group">
+            <label for="topic">Sujet</label>
+            <select id="topic">
+              <option>Question générale</option>
+              <option>Partenariat</option>
+              <option>Presse</option>
+              <option>Inscription</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group" style="grid-column: 1 / -1">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              rows="4"
+              placeholder="Décrivez votre besoin"
+            ></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn" type="button">Envoyer</button>
+            <p class="helper">Réponse sous 48h ouvrées.</p>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div>
+          <h3>Coup d'Oeil</h3>
+          <p>Marchés de créateurs pour valoriser les talents émergents.</p>
+        </div>
+        <div>
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="events.html">Éditions</a></li>
+            <li><a href="artists.html">Artistes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="legal.html">Mentions légales</a></li>
+            <li><a href="privacy.html">Confidentialité</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Écrire à l'équipe</a></li>
+            <li>
+              <a href="mailto:eventcoupdoeil@ynov.fr"
+                >eventcoupdoeil@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Coup d'Oeil · Événement.</div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

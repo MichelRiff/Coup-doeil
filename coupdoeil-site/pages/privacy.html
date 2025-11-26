@@ -1,103 +1,164 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Politique de confidentialité – Coup d'Oeil</title>
-<meta name="description" content="Politique de confidentialité Coup d'Oeil : données collectées, finalités, droits RGPD.">
-<link rel="stylesheet" href="../assets/css/main.css">
-<link rel="stylesheet" href="../assets/css/forms.css">
-</head>
-<body>
-	<a class="skip-link" href="#contenu">Aller au contenu</a>
-		<header>
-		<div class="navbar" role="navigation" aria-label="Navigation principale">
-			<a class="logo" href="../index.html">Coup d'Oeil</a>
-				<nav>
-					<ul class="nav-links">
-						<li><a data-page="index.html" href="../index.html">Accueil</a></li>
-						<li><a data-page="pages/about.html" href="about.html">À propos</a></li>
-						<li><a data-page="pages/events.html" href="events.html">Éditions</a></li>
-						<li><a data-page="pages/artists.html" href="artists.html">Artistes</a></li>
-						<li><a data-page="pages/contact.html" href="contact.html">Contact</a></li>
-						<li><a data-page="pages/legal.html" href="legal.html">Mentions légales</a></li>
-					</ul>
-				</nav>
-				<div class="nav-actions">
-					<button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-						<span aria-hidden="true">🌞</span>
-						<span data-theme-label>Mode clair</span>
-					</button>
-					<a class="btn" href="register-artist.html">S'inscrire</a>
-					</div>
-				</div>
-			</header>
-			<main id="contenu">
-				<section class="section">
-					<div class="section-header">
-						<h1>Politique de confidentialité</h1>
-						<p>Cette page explique comment Coup d'Oeil traite les informations collectées via les formulaires statiques du site.</p>
-					</div>
-						<div class="card-grid">
-						<div class="card">
-							<h2>Données collectées</h2>
-							<ul>
-								<li>Données d'identité et de contact (nom, email) lors des formulaires artistes, visiteurs ou contact.</li>
-								<li>Informations de projet (discipline, liens portfolio, besoins logistiques) pour les artistes.</li>
-								<li>Préférences de communication (newsletter) et choix d'édition.</li>
-							</ul>
-						</div>
-						<div class="card">
-							<h2>Finalités et base légale</h2>
-							<p>Les données sont utilisées pour organiser les marchés, répondre aux demandes et envoyer des informations liées à Coup d'Oeil. Le traitement repose sur le consentement explicite donné dans les formulaires.</p>
-						</div>
-						<div class="card">
-							<h2>Durée de conservation</h2>
-							<p>Les données saisies sur ce site sont stockées dans votre navigateur (localStorage) et ne sont pas transmises automatiquement. Les données opérationnelles collectées lors des éditions sont conservées pendant 24 mois maximum.</p>
-						</div>
-						<div class="card">
-							<h2>Vos droits</h2>
-							<p>Conformément au RGPD, vous pouvez demander l'accès, la rectification ou la suppression de vos données. Contact : <a href="mailto:coupdoeil@gmail.com">coupdoeil@gmail.com</a>.</p>
-						</div>
-						<div class="card">
-							<h2>Sécurité</h2>
-							<p>Le site est statique et applique des validations front pour limiter les risques d'injection. Aucune bibliothèque tierce n'est utilisée pour éviter les charges inutiles.</p>
-						</div>
-					</div>
-				</section>
-			</main>
-			<footer>
-				<div class="footer-content">
-					<div>
-						<h3>Coup d'Oeil</h3>
-						<p>Marchés de créateurs pour valoriser les talents émergents.</p>
-					</div>
-					<div>
-						<h4>Ressources</h4>
-						<ul>
-							<li><a href="about.html">À propos</a></li>
-							<li><a href="events.html">Éditions</a></li>
-							<li><a href="artists.html">Artistes</a></li>
-						</ul>
-					</div>
-					<div>
-						<h4>Légal</h4>
-						<ul>
-							<li><a href="legal.html">Mentions légales</a></li>
-							<li><a href="privacy.html">Confidentialité</a></li>
-							<li><a href="cookies.html">Cookies</a></li>
-						</ul>
-					</div>
-					<div>
-						<h4>Contact</h4>
-						<ul>
-							<li><a href="contact.html">Écrire à l'équipe</a></li>
-							<li><a href="mailto:eventcoupdoeil@ynov.fr">eventcoupdoeil@gmail.com</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer-bottom">© 2025 Coup d'Oeil · Événement.</div>
-				</footer>
-				<script src="../assets/js/main.js"></script>
-			</body>
-		</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Politique de confidentialité – Coup d'Oeil</title>
+    <meta
+      name="description"
+      content="Politique de confidentialité Coup d'Oeil : données collectées, finalités, droits RGPD."
+    />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/forms.css" />
+    <link rel="icon" href="assets/img/FAVICON_COUP_OEIL-01.png" type="image/x-icon" />  
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header>
+      <div class="navbar" role="navigation" aria-label="Navigation principale">
+        <a class="logo" href="../index.html">
+          <img
+            src="../assets/img/LOGOS_COUP_DOEIL.png"
+            alt="Logo Coup d'Oeil"
+            decoding="async"
+          />
+          <span class="sr-only">Coup d'Oeil</span>
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a data-page="index.html" href="../index.html">Accueil</a></li>
+            <li>
+              <a data-page="pages/about.html" href="about.html">À propos</a>
+            </li>
+            <li>
+              <a data-page="pages/events.html" href="events.html">Éditions</a>
+            </li>
+            <li>
+              <a data-page="pages/artists.html" href="artists.html">Artistes</a>
+            </li>
+            <li>
+              <a data-page="pages/contact.html" href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a data-page="pages/legal.html" href="legal.html"
+                >Mentions légales</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-pressed="false"
+          >
+            <span aria-hidden="true">🌞</span>
+            <span data-theme-label>Mode clair</span>
+          </button>
+          <a class="btn" href="register-artist.html">S'inscrire</a>
+        </div>
+      </div>
+    </header>
+    <main id="contenu">
+      <section class="section">
+        <div class="section-header">
+          <h1>Politique de confidentialité</h1>
+          <p>
+            Cette page explique comment Coup d'Oeil traite les informations
+            collectées via les formulaires statiques du site.
+          </p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <h2>Données collectées</h2>
+            <ul>
+              <li>
+                Données d'identité et de contact (nom, email) lors des
+                formulaires artistes, visiteurs ou contact.
+              </li>
+              <li>
+                Informations de projet (discipline, liens portfolio, besoins
+                logistiques) pour les artistes.
+              </li>
+              <li>
+                Préférences de communication (newsletter) et choix d'édition.
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2>Finalités et base légale</h2>
+            <p>
+              Les données sont utilisées pour organiser les marchés, répondre
+              aux demandes et envoyer des informations liées à Coup d'Oeil. Le
+              traitement repose sur le consentement explicite donné dans les
+              formulaires.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Durée de conservation</h2>
+            <p>
+              Les données saisies sur ce site sont stockées dans votre
+              navigateur (localStorage) et ne sont pas transmises
+              automatiquement. Les données opérationnelles collectées lors des
+              éditions sont conservées pendant 24 mois maximum.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Vos droits</h2>
+            <p>
+              Conformément au RGPD, vous pouvez demander l'accès, la
+              rectification ou la suppression de vos données. Contact :
+              <a href="mailto:coupdoeil@gmail.com">coupdoeil@gmail.com</a>.
+            </p>
+          </div>
+          <div class="card">
+            <h2>Sécurité</h2>
+            <p>
+              Le site est statique et applique des validations front pour
+              limiter les risques d'injection. Aucune bibliothèque tierce n'est
+              utilisée pour éviter les charges inutiles.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <div>
+          <h3>Coup d'Oeil</h3>
+          <p>Marchés de créateurs pour valoriser les talents émergents.</p>
+        </div>
+        <div>
+          <h4>Ressources</h4>
+          <ul>
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="events.html">Éditions</a></li>
+            <li><a href="artists.html">Artistes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="legal.html">Mentions légales</a></li>
+            <li><a href="privacy.html">Confidentialité</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Écrire à l'équipe</a></li>
+            <li>
+              <a href="mailto:eventcoupdoeil@ynov.fr"
+                >eventcoupdoeil@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2025 Coup d'Oeil · Événement.</div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
