@@ -355,23 +355,29 @@ nav {
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-xs);
+  justify-content: center;
   padding: 10px 12px;
   border-radius: 999px;
   border: 1px solid var(--color-border);
-  background: color-mix(
-    in srgb,
-    var(--color-surface) 88%,
-    var(--tone-accent-soft)
-  );
+  background: color-mix(in srgb, #eeeeee 75%, var(--color-surface));
   color: var(--color-text);
   cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 
+:root[data-theme="dark"] .theme-toggle {
+  background: color-mix(in srgb, #eeeeee 55%, var(--color-surface));
+}
+
+.theme-toggle__icon {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
 .theme-toggle:hover,
 .theme-toggle:focus-visible {
-  background: var(--color-surface-muted);
+  background: color-mix(in srgb, #f5f5f5 85%, var(--color-surface));
   transform: translateY(-1px);
 }
 
@@ -702,7 +708,8 @@ main {
   margin: var(--spacing-sm) 0 var(--spacing);
 }
 
-.pill-nav button {
+.pill-nav button,
+.pill-nav a {
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   padding: 10px 14px;
@@ -710,16 +717,22 @@ main {
   cursor: pointer;
   color: var(--color-text);
   font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .pill-nav button:hover,
-.pill-nav button:focus-visible {
+.pill-nav button:focus-visible,
+.pill-nav a:hover,
+.pill-nav a:focus-visible {
   transform: translateY(-1px);
   background: var(--color-surface-muted);
 }
 
-.pill-nav button.active {
+.pill-nav button.active,
+.pill-nav a.active {
   background: linear-gradient(
     120deg,
     var(--color-primary),
@@ -731,6 +744,55 @@ main {
     var(--color-secondary) 28%,
     var(--color-primary)
   );
+}
+
+.legal-hero {
+  background: color-mix(
+    in srgb,
+    var(--color-surface) 90%,
+    var(--tone-secondary-soft)
+  );
+  border: 1px solid
+    color-mix(in srgb, var(--color-secondary) 30%, var(--color-border));
+  border-radius: var(--radius);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.legal-hero p {
+  color: var(--color-muted);
+  max-width: 720px;
+}
+
+.legal-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing);
+}
+
+.legal-list {
+  margin: 0;
+  padding: 0;
+}
+
+.legal-list dt {
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: var(--spacing-sm);
+}
+
+.legal-list dd {
+  margin: 0 0 var(--spacing-sm);
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.legal-note {
+  background: var(--color-highlight);
+  border-left: 4px solid var(--color-secondary);
+  padding: var(--spacing);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
 }
 
 .search-input {

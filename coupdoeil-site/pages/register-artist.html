@@ -28,13 +28,17 @@
           <ul class="nav-links">
             <li><a data-page="index.html" href="../index.html">Accueil</a></li>
             <li>
+              <a data-page="pages/events.html" href="events.html"
+                >Éditions</a
+              >
+            </li>
+            <li>
+              <a data-page="pages/artists.html" href="artists.html"
+                >Artistes</a
+              >
+            </li>
+            <li>
               <a data-page="pages/about.html" href="about.html">À propos</a>
-            </li>
-            <li>
-              <a data-page="pages/events.html" href="events.html">Éditions</a>
-            </li>
-            <li>
-              <a data-page="pages/artists.html" href="artists.html">Artistes</a>
             </li>
             <li>
               <a data-page="pages/contact.html" href="contact.html">Contact</a>
@@ -52,11 +56,16 @@
             type="button"
             data-theme-toggle
             aria-pressed="false"
+            aria-label="Basculer le thème"
           >
-            <span aria-hidden="true">🌞</span>
-            <span data-theme-label>Mode clair</span>
+            <img
+              src="../assets/img/light_dark.png"
+              alt=""
+              class="theme-toggle__icon"
+              aria-hidden="true"
+              decoding="async"
+            />
           </button>
-          <a class="btn" href="register-artist.html">S'inscrire</a>
         </div>
       </div>
     </header>

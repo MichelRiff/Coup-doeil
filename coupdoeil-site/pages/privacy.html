@@ -28,13 +28,17 @@
           <ul class="nav-links">
             <li><a data-page="index.html" href="../index.html">Accueil</a></li>
             <li>
+              <a data-page="pages/events.html" href="events.html"
+                >Éditions</a
+              >
+            </li>
+            <li>
+              <a data-page="pages/artists.html" href="artists.html"
+                >Artistes</a
+              >
+            </li>
+            <li>
               <a data-page="pages/about.html" href="about.html">À propos</a>
-            </li>
-            <li>
-              <a data-page="pages/events.html" href="events.html">Éditions</a>
-            </li>
-            <li>
-              <a data-page="pages/artists.html" href="artists.html">Artistes</a>
             </li>
             <li>
               <a data-page="pages/contact.html" href="contact.html">Contact</a>
@@ -52,75 +56,129 @@
             type="button"
             data-theme-toggle
             aria-pressed="false"
+            aria-label="Basculer le thème"
           >
-            <span aria-hidden="true">🌞</span>
-            <span data-theme-label>Mode clair</span>
+            <img
+              src="../assets/img/light_dark.png"
+              alt=""
+              class="theme-toggle__icon"
+              aria-hidden="true"
+              decoding="async"
+            />
           </button>
-          <a class="btn" href="register-artist.html">S'inscrire</a>
         </div>
       </div>
     </header>
     <main id="contenu">
-      <section class="section">
-        <div class="section-header">
-          <h1>Politique de confidentialité</h1>
-          <p>
-            Cette page explique comment Coup d'Oeil traite les informations
-            collectées via les formulaires statiques du site.
-          </p>
+      <section class="section legal-hero">
+        <p class="badge">Protection des données</p>
+        <h1>Politique de confidentialité</h1>
+        <p>
+          Nous détaillons ci-dessous les informations collectées via les
+          formulaires Coup d'Oeil, la manière dont elles sont utilisées et vos
+          droits en tant que visiteur ou exposant.
+        </p>
+        <div class="pill-nav" role="navigation" aria-label="Navigation juridique">
+          <a href="legal.html">Mentions légales</a>
+          <a class="active" href="privacy.html">Confidentialité</a>
+          <a href="cookies.html">Cookies</a>
         </div>
+      </section>
+      <section class="section">
         <div class="card-grid">
-          <div class="card">
+          <article class="card">
+            <h2>Responsable du traitement</h2>
+            <p>
+              Coup d'Oeil, collectif étudiant Ynov (contact :
+              <a href="mailto:eventcoupdoeil@ynov.fr">eventcoupdoeil@ynov.fr</a>)
+              agit en qualité de responsable du traitement pour les données
+              collectées via ce site.
+            </p>
+          </article>
+          <article class="card">
             <h2>Données collectées</h2>
             <ul>
+              <li>Identité et coordonnées (nom, prénom, email, téléphone).</li>
               <li>
-                Données d'identité et de contact (nom, email) lors des
-                formulaires artistes, visiteurs ou contact.
+                Informations sur l'activité artistique (discipline, liens, besoins
+                techniques, messages).
               </li>
               <li>
-                Informations de projet (discipline, liens portfolio, besoins
-                logistiques) pour les artistes.
-              </li>
-              <li>
-                Préférences de communication (newsletter) et choix d'édition.
+                Préférences d'inscription (type de participation, édition choisie,
+                consentement newsletter).
               </li>
             </ul>
-          </div>
-          <div class="card">
-            <h2>Finalités et base légale</h2>
+          </article>
+          <article class="card">
+            <h2>Sécurité & stockage</h2>
             <p>
-              Les données sont utilisées pour organiser les marchés, répondre
-              aux demandes et envoyer des informations liées à Coup d'Oeil. Le
-              traitement repose sur le consentement explicite donné dans les
-              formulaires.
+              Le site est statique : les informations saisies sont validées côté
+              navigateur et peuvent être conservées localement (localStorage) pour
+              faciliter vos brouillons. Les données transmises par email sont
+              stockées de façon sécurisée dans les boîtes de réception de
+              l'équipe, hébergées au sein de Microsoft 365.
             </p>
-          </div>
-          <div class="card">
-            <h2>Durée de conservation</h2>
-            <p>
-              Les données saisies sur ce site sont stockées dans votre
-              navigateur (localStorage) et ne sont pas transmises
-              automatiquement. Les données opérationnelles collectées lors des
-              éditions sont conservées pendant 24 mois maximum.
-            </p>
-          </div>
-          <div class="card">
-            <h2>Vos droits</h2>
-            <p>
-              Conformément au RGPD, vous pouvez demander l'accès, la
-              rectification ou la suppression de vos données. Contact :
-              <a href="mailto:coupdoeil@gmail.com">coupdoeil@gmail.com</a>.
-            </p>
-          </div>
-          <div class="card">
-            <h2>Sécurité</h2>
-            <p>
-              Le site est statique et applique des validations front pour
-              limiter les risques d'injection. Aucune bibliothèque tierce n'est
-              utilisée pour éviter les charges inutiles.
-            </p>
-          </div>
+          </article>
         </div>
+      </section>
+      <section class="section">
+        <h2>Finalités, base légale et durées</h2>
+        <table class="table-simple">
+          <caption>Traitements déclarés</caption>
+          <thead>
+            <tr>
+              <th>Finalité</th>
+              <th>Base légale</th>
+              <th>Durée maximale</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gestion des candidatures artistes et visiteurs</td>
+              <td>Consentement (formulaire dédié)</td>
+              <td>24 mois après le dernier échange</td>
+            </tr>
+            <tr>
+              <td>Envoi d'informations pratiques (newsletter, rappels)</td>
+              <td>Consentement explicite</td>
+              <td>Jusqu'au retrait du consentement</td>
+            </tr>
+            <tr>
+              <td>Réponse aux messages du formulaire de contact</td>
+              <td>Intérêt légitime (gestion des demandes)</td>
+              <td>12 mois maximum</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="section">
+        <h2>Vos droits RGPD</h2>
+        <div class="legal-note">
+          <p>
+            Vous disposez d'un droit d'accès, de rectification, d'effacement, de
+            limitation et d'opposition. Vous pouvez retirer votre consentement à
+            tout moment et demander la portabilité de vos données.
+          </p>
+        </div>
+        <p style="margin-top: var(--spacing);">
+          Toute demande est à adresser à
+          <a href="mailto:eventcoupdoeil@ynov.fr">eventcoupdoeil@ynov.fr</a>
+          en précisant l'objet « Droits RGPD – Coup d'Oeil ». Une réponse vous
+          sera envoyée dans un délai maximal de 30 jours. En cas de litige, vous
+          pouvez saisir la CNIL (<a href="https://www.cnil.fr" target="_blank"
+            rel="noopener noreferrer"
+            >cnil.fr</a
+          >).
+        </p>
+      </section>
+      <section class="section">
+        <h2>Cookies et mesure d'audience</h2>
+        <p>
+          Nous n'utilisons que des cookies essentiels au fonctionnement du site et
+          un indicateur d'audience anonyme. Consultez la page
+          <a href="cookies.html">Cookies</a> pour connaitre les catégories,
+          durées de vie et paramétrages disponibles.
+        </p>
       </section>
     </main>
     <footer>

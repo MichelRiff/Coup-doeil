@@ -13,7 +13,6 @@
     <link rel="icon" href="assets/img/FAVICON_COUP_OEIL-01.png" type="image/x-icon" />  
   </head>
   <body>
-    <a class="skip-link" href="#contenu">Aller au contenu</a>
     <header>
       <div class="navbar" role="navigation" aria-label="Navigation principale">
         <a class="logo" href="../index.html">
@@ -28,13 +27,17 @@
           <ul class="nav-links">
             <li><a data-page="index.html" href="../index.html">Accueil</a></li>
             <li>
+              <a data-page="pages/events.html" href="events.html"
+                >Éditions</a
+              >
+            </li>
+            <li>
+              <a data-page="pages/artists.html" href="artists.html"
+                >Artistes</a
+              >
+            </li>
+            <li>
               <a data-page="pages/about.html" href="about.html">À propos</a>
-            </li>
-            <li>
-              <a data-page="pages/events.html" href="events.html">Éditions</a>
-            </li>
-            <li>
-              <a data-page="pages/artists.html" href="artists.html">Artistes</a>
             </li>
             <li>
               <a data-page="pages/contact.html" href="contact.html">Contact</a>
@@ -52,41 +55,114 @@
             type="button"
             data-theme-toggle
             aria-pressed="false"
+            aria-label="Basculer le thème"
           >
-            <span aria-hidden="true">🌞</span>
-            <span data-theme-label>Mode clair</span>
+            <img
+              src="../assets/img/light_dark.png"
+              alt=""
+              class="theme-toggle__icon"
+              aria-hidden="true"
+              decoding="async"
+            />
           </button>
-          <a class="btn" href="register-artist.html">S'inscrire</a>
         </div>
       </div>
     </header>
     <main id="contenu">
-      <section class="section">
+      <section class="section legal-hero">
+        <p class="badge">Cadre réglementaire</p>
         <h1>Mentions légales</h1>
-
-        <div class="section">
-          <h2>Propriété intellectuelle</h2>
+        <p>
+          Coup d'Oeil est un projet associatif mené par des étudiant·es d'Ynov
+          Campus. Cette page précise l'identité de l'éditeur, l'hébergement du
+          site et les responsabilités liées aux contenus publiés.
+        </p>
+        <div class="pill-nav" role="navigation" aria-label="Navigation juridique">
+          <a class="active" href="legal.html">Mentions légales</a>
+          <a href="privacy.html">Confidentialité</a>
+          <a href="cookies.html">Cookies</a>
+        </div>
+      </section>
+      <section class="section">
+        <div class="legal-columns">
+          <article class="card">
+            <h2>Éditeur du site</h2>
+            <dl class="legal-list">
+              <dt>Organisation</dt>
+              <dd>Coup d'Oeil – Collectif d'étudiant·es Ynov.</dd>
+              <!-- <dt>Adresse</dt>
+              <dd>Campus Ynov Paris, 12 rue Anatole France, 92300 Levallois.</dd>
+              <dt>Contact</dt>
+              <dd>
+                <a href="mailto:eventcoupdoeil@ynov.fr">eventcoupdoeil@ynov.fr</a>
+              </dd> -->
+            </dl>
+          </article>
+          <article class="card">
+            <h2>Responsable de la publication</h2>
+            <p>
+              La direction éditoriale est assurée par l'équipe communication de
+              Coup d'Oeil. Pour toute question ou demande de rectification,
+              écrivez à l'adresse ci-dessus.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Hébergement</h2>
+            <dl class="legal-list">
+              <!-- <dt>Prestataire</dt>
+              <dd>GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.</dd>
+              <dt>Infrastructure</dt>
+              <dd>GitHub Pages – hébergement statique sécurisé via HTTPS.</dd> -->
+            </dl>
+          </article>
+          <article class="card">
+            <h2>Propriété intellectuelle</h2>
+            <p>
+              Les marques, textes, visuels et illustrations présentés sont la
+              propriété de leurs auteur·rices respectif·ves. Toute reproduction
+              ou adaptation nécessite une autorisation écrite de l'équipe ou des
+              artistes concernés.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <h2>Responsabilités et disponibilité</h2>
+        <div class="legal-note">
           <p>
-            Les contenus visuels et textuels publiés sur le site restent la
-            propriété de leurs auteurs. Toute reproduction doit obtenir
-            l'autorisation préalable de l'artiste concerné.
+            Le site a une vocation informative. Malgré les relectures régulières,
+            Coup d'Oeil ne peut garantir l'absence totale d'erreur ou
+            d'indisponibilité ponctuelle. L'accès peut être suspendu pour
+            maintenance ou mise à jour du contenu.
           </p>
         </div>
-        <div class="section">
-          <h2>Responsabilité</h2>
-          <p>
-            Le site est statique et fourni à titre informatif. L'équipe
-            s'efforce d'assurer l'exactitude des informations mais ne peut être
-            tenue responsable des erreurs ou indisponibilités temporaires.
-          </p>
+        <div class="legal-columns" style="margin-top: var(--spacing);">
+          <article class="card">
+            <h3>Liens externes</h3>
+            <p>
+              Les liens vers des sites tiers sont fournis à titre pratique.
+              Coup d'Oeil n'exerce aucun contrôle sur ces ressources et décline
+              toute responsabilité quant à leur contenu.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Droit applicable</h3>
+            <p>
+              Le site et ses conditions d'utilisation sont régis par le droit
+              français. Tout litige relèvera des juridictions compétentes de
+              Paris.
+            </p>
+          </article>
         </div>
-        <div class="section">
-          <h2>Droit applicable</h2>
-          <p>
-            Le contenu est régi par le droit français. En cas de litige, les
-            juridictions compétentes seront celles du ressort de Paris.
-          </p>
-        </div>
+      </section>
+      <section class="section">
+        <h2>Nous contacter</h2>
+        <p>
+          Besoin d'informations complémentaires ou d'un signalement ?
+          Contactez-nous à
+          <a href="mailto:eventcoupdoeil@ynov.fr">eventcoupdoeil@ynov.fr</a>.
+          Nous répondrons sous 5 jours ouvrés.
+        </p>
       </section>
     </main>
     <footer>
