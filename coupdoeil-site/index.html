@@ -13,20 +13,32 @@
       property="og:description"
       content="Marchés de créateurs, inscriptions artistes et visiteurs, répertoire des talents."
     />
+    <link rel="preload" as="image" href="assets/img/banner/bg-joy-light.svg" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/img/banner/bg-joy-dark.svg"
+      media="(prefers-color-scheme: dark)"
+    />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/forms.css" />
-    <link rel="icon" href="assets/img/FAVICON_COUP_OEIL-01.png" type="image/x-icon" />   
+    <link rel="icon" href="assets/img/logo/FAVICON_COUP_OEIL-01.png" type="image/x-icon" />
   </head>
   <body>
-    <!-- <div class="banner">
-      Coup d'Oeil – Une vitrine bienveillante pour les créateurs.
-    </div> -->
     <header>
       <div class="navbar" role="navigation" aria-label="Navigation principale">
         <a class="logo" href="index.html">
           <img
-            src="assets/img/LOGOS_COUP_DOEIL.png"
+            src="assets/img/logo/nobg_logo_light.png"
             alt="Logo Coup d'Oeil"
+            class="logo-img logo-img--light"
+            decoding="async"
+          />
+          <img
+            src="assets/img/logo/nobg_logo_dark.png"
+            alt=""
+            class="logo-img logo-img--dark"
+            aria-hidden="true"
             decoding="async"
           />
           <span class="sr-only">Coup d'Oeil</span>
@@ -70,7 +82,7 @@
             aria-label="Basculer le thème"
           >
             <img
-              src="assets/img/light_dark.png"
+              src="assets/img/logo/light_dark.png"
               alt=""
               class="theme-toggle__icon"
               aria-hidden="true"
@@ -85,42 +97,48 @@
       data-hero-banner
       aria-label="Ambiance artisanale du marché Coup d'Oeil"
     >
-      <img
-        src="assets/img/hero-banner.svg"
-        alt="Collage coloré de pièces artisanales réalisées par les créateurs Coup d'Oeil"
-        decoding="async"
-        fetchpriority="high"
-      />
+      <div class="hero-banner__content">
+        <div class="hero-banner__logo">
+          <img
+            src="assets/img/logo/bg_logo_light.png"
+            alt="Coup d'Oeil"
+            class="logo-imgw logo-img--light"
+            decoding="async"
+          />
+          <img
+            src="assets/img/logo/bg_logo_dark.png"
+            alt=""
+            class="logo-imgw logo-img--dark"
+            aria-hidden="true"
+            decoding="async"
+          />
+      </div>
     </section>
     <main id="contenu">
       <section class="section" id="presentation">
         <div class="section-header">
           <h2>Le projet Coup d'Oeil</h2>
+          <h4>Nous sommes un collectif organisant des marchés de créateurs sur Lyon pour l’association RONDS & COULEURS. </h4>
         </div>
         <div class="card-grid">
           <div class="card">
-            <h3>Une vitrine bienveillante</h3>
+            <h3>Une équipe motivée</h3>
             <p>
-              Coup d'Oeil accompagne des artistes étudiants ou professionnels et
-              leur offre un espace pour présenter, raconter et vendre leurs
-              créations au sein d'Ynov.
+              Nous sommes 8 jeunes travaillant dans de nombreux domaines avec un objectif commun, créer un événement qui TE ressemble.
             </p>
           </div>
           <div class="card">
-            <h3>Communauté engagée</h3>
+            <h3>Engagés pour les VRAIS artistes</h3>
             <p>
-              Les équipes Ynov, les bénévoles et les visiteurs construisent une
-              ambiance conviviale où les échanges sont encouragés.
+              On dit bye bye à l’IA et au dropshipping dans nos marchés et on met en avant les artistes locaux et faits main.
             </p>
           </div>
           <div class="card">
-            <h3>Découverte et transmission</h3>
+            <h3>L’inclusivité avant tout</h3>
             <p>
-              Des démonstrations, des discussions et une mise en avant du
-              processus créatif sensibilisent au travail artistique.
+              On souhaite faire de notre évènement une safe place pour toute personne en mettant en avant des œuvres représentant tout types de personnes (Handicap, POC, racisées, LGBTQIA+ …)
             </p>
           </div>
-        </div>
       </section>
       <section class="section" id="objectifs">
         <div class="section-header">
@@ -129,24 +147,21 @@
         </div>
         <div class="card-grid">
           <div class="card">
-            <h3>Valoriser les artistes</h3>
+            <h3>Mettre en avant les créateurs lyonnais</h3>
             <p>
-              Offrir une vitrine et des retours constructifs pour les artistes
-              émergents, étudiants ou professionnels.
+              En leur proposant d’exposer gratuitement leurs créations.
             </p>
           </div>
           <div class="card">
-            <h3>Créer du lien</h3>
+            <h3>Te faire découvrir de supers artistes</h3>
             <p>
-              Mettre en relation la communauté Ynov avec les créateurs à travers
-              des rencontres, ateliers et échanges.
+              Qu’on aura sélectionné avec précisions pour leur talent et leur originalité.
             </p>
           </div>
           <div class="card">
-            <h3>Encourager la découverte</h3>
+            <h3>Aider les étudiants en art à se lancer dans entrepreneuriat</h3>
             <p>
-              Sensibiliser au travail artisanal et stimuler l'envie d'acheter
-              auprès d'artistes locaux.
+              C’est l’occasion de rencontrer des pros et des gens passionnés dans un même lieu.
             </p>
           </div>
         </div>
@@ -158,11 +173,6 @@
         </div>
         <div class="timeline">
           <div class="card step">
-            <h3>Marché de Noël</h3>
-            <p class="muted">Décembre 2025 · Marché de Noël.</p>
-            <p>Premières rencontres, retours précieux.</p>
-          </div>
-          <div class="card step">
             <h3>Édition Printemps</h3>
             <p class="muted">Avril 2026 · Ajustée selon les retours.</p>
             <p>
@@ -170,28 +180,16 @@
               scène colorées.
             </p>
           </div>
-          <div class="card step">
-            <h3>Marché Final</h3>
-            <p class="muted">Juin 2026 · L'édition phare.</p>
-            <p>
-              Plus grand format, performances live, vitrines interactives et
-              ateliers participatifs.
-            </p>
-          </div>
         </div>
       </section>
       <section class="section" id="artistes">
         <div class="section-header">
           <h2>Artistes mis en avant</h2>
-          <a class="btn secondary" href="pages/artists.html">Voir la galerie</a>
-        </div>
-        <div class="card-grid">
-          <div class="card artist-card">
-            <img
-              src="assets/img/artist1.jpg"
-              alt="Illustration abstraite"
-              loading="lazy"
-            />
+            <a class="btn secondary" href="pages/artists.html">Voir la galerie</a>
+          </div>
+          <div class="card-grid">
+            <div class="card artist-card">
+              <img/>
             <h3>Lina Moreau</h3>
             <div class="artist-meta">
               <span class="badge">Illustration</span>
@@ -203,11 +201,7 @@
             </p>
           </div>
           <div class="card artist-card">
-            <img
-              src="assets/img/artist4.jpg"
-              alt="Accessoires textiles"
-              loading="lazy"
-            />
+            <img/>
             <h3>Studio Louve</h3>
             <div class="artist-meta">
               <span class="badge">Textile</span>
@@ -219,11 +213,7 @@
             </p>
           </div>
           <div class="card artist-card">
-            <img
-              src="assets/img/artist8.jpg"
-              alt="Photo de lumière"
-              loading="lazy"
-            />
+            <img/>
             <h3>Lueur Nord</h3>
             <div class="artist-meta">
               <span class="badge">Photo</span>
@@ -239,22 +229,39 @@
       <section class="section" id="faq">
         <div class="section-header">
           <h2>FAQ</h2>
-          <a href="pages/contact.html" class="btn secondary"
-            >Contactez l'équipe</a
-          >
+          <a href="pages/contact.html" class="btn secondary">Contactez l'équipe</a>
         </div>
-        <div class="card-grid">
-          <div class="faq-item">
-            <h3>Qui peut candidater ?</h3>
-            <p>Étudiants Ynov et artistes émergents externes.</p>
+        <div class="card faq-stack">
+          <div class="faq-block">
+            <h3>Visiteurs</h3>
+            <div class="faq-item">
+              <h4>Est-ce que l’entrée est gratuite ?</h4>
+              <p>Oui, l’entrée du marché des créateurs Coup d’Oeil est toujours gratuite. Si tu souhaites soutenir notre projet et l’aider à continuer, tu peux faire un don à notre association RONDS & COULEURS (mais rien d’obligatoire !)</p>
+            </div>
+            <div class="faq-item">
+              <h4>Peut-on acheter sur place ?</h4>
+              <p>Oui, tu pourras explorer les différents stands de chaque artiste, discuter avec eux et faire les achats qui te plaisent ! Pense à prévoir de l’espèce pour les exposants qui ne posséderaient pas de TPE.</p>
+            </div>
           </div>
-          <div class="faq-item">
-            <h3>Comment sont sélectionnés les artistes ?</h3>
-            <p></p>
-          </div>
-          <div class="faq-item">
-            <h3>Peut-on acheter sur place ?</h3>
-            <p></p>
+          <div class="faq-separator" role="presentation"></div>
+          <div class="faq-block">
+            <h3>Exposants</h3>
+            <div class="faq-item">
+              <h4>Qui peut candidater ?</h4>
+              <p>Tout créateur quel que soit son niveau ou son expérience à condition de ne pas voler ou reproduire des oeuvres déjà existantes. L’IA et le dropshipping ne seront pas acceptés. Nous demandons juste à ce que la personne ait bien déclaré son entreprise afin d’être conforme à la loi.</p>
+            </div>
+            <div class="faq-item">
+              <h4>Comment sont sélectionnés les artistes ?</h4>
+              <p>Maëlla et Eli de notre team se chargeront de regarder chaque candidature pour sélectionner les exposants qui correspondent le mieux au thème de la prochaine édition. Nous ne prenons pas les vendeurs utilisant de l’IA ou faisant du dropshipping. Pas de panique si tu n’es pas sélectionné, d’autres éditions arrivent bientôt…</p>
+            </div>
+            <div class="faq-item">
+              <h4>Est-ce que le stand est payant ?</h4>
+              <p>Non, tu peux venir exposer gratuitement et on te fournit même la table et la chaise ! La validation d’un stand nécessite un chèque de caution afin de garantir ta venue (nous ne l’encaissons qu’en cas de désistement de dernière minute). Et en plus, on tient à récompenser ton travail : nous ne toucherons aucune commission sur les ventes afin de garantir que tu puisses en profiter.</p>
+            </div>
+            <div class="faq-item">
+              <h4>Je ne suis pas artiste mais j’ai une idée de stand ?</h4>
+              <p>Contacte-nous sur eventcoupdoeil@gmail.com et nous étudierons ta proposition. Pense à détailler ton projet pour que nous puissions bien le comprendre.</p>
+            </div>
           </div>
         </div>
       </section>

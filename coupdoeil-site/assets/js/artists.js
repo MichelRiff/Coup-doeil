@@ -1,3 +1,7 @@
+const ARTIST_PLACEHOLDER_LIGHT = "../assets/img/banner/bg-joy-light.svg";
+const ARTIST_PLACEHOLDER_DARK = "../assets/img/banner/bg-joy-dark.svg";
+const ARTIST_PLACEHOLDER_ALT = "../assets/img/hero-banner.svg";
+
 const ARTISTS = [
   {
     name: "Atelier Sel & Terre",
@@ -5,7 +9,7 @@ const ARTISTS = [
     bio: "Petites séries d’objets en grès chamotté.",
     tags: ["grès", "utilitaire"],
     link: "#",
-    img: "../assets/img/artist1.xcf",
+    img: ARTIST_PLACEHOLDER_LIGHT,
   },
   {
     name: "Nébuleuse Sonore",
@@ -13,7 +17,7 @@ const ARTISTS = [
     bio: "Live ambient et textures électroniques pour voyages introspectifs.",
     tags: ["ambient", "electro", "live"],
     link: "#",
-    img: "../assets/img/artist2.xcf",
+    img: ARTIST_PLACEHOLDER_DARK,
   },
   {
     name: "Studio Lune Noire",
@@ -21,7 +25,7 @@ const ARTISTS = [
     bio: "Affiches oniriques inspirées de la nuit et des néons urbains.",
     tags: ["affiche", "onirique", "néon"],
     link: "#",
-    img: "../assets/img/artist3.xcf",
+    img: ARTIST_PLACEHOLDER_ALT,
   },
   {
     name: "Beat Bunker",
@@ -29,7 +33,7 @@ const ARTISTS = [
     bio: "Beats hip-hop lo-fi produits en direct sur pad.",
     tags: ["lofi", "hip-hop", "beatmaking"],
     link: "#",
-    img: "../assets/img/artist4.xcf",
+    img: ARTIST_PLACEHOLDER_LIGHT,
   },
 
   {
@@ -38,7 +42,7 @@ const ARTISTS = [
     bio: "Broderies fines autour des constellations et des mythes.",
     tags: ["broderie", "constellation", "slow-art"],
     link: "#",
-    img: "../assets/img/artist5.xcf",
+    img: ARTIST_PLACEHOLDER_DARK,
   },
   {
     name: "Lune de Vinyl",
@@ -46,7 +50,7 @@ const ARTISTS = [
     bio: "Sélection vinyle house & disco pour danser toute la soirée.",
     tags: ["dj-set", "vinyle", "house"],
     link: "#",
-    img: "../assets/img/artist6.xcf",
+    img: ARTIST_PLACEHOLDER_ALT,
   },
   {
     name: "Mains d’Encre",
@@ -54,7 +58,7 @@ const ARTISTS = [
     bio: "Flashs graphiques inspirés de la nature et du cyberpunk.",
     tags: ["flash", "noir-et-gris", "graphique"],
     link: "#",
-    img: "../assets/img/artist7.xcf",
+    img: ARTIST_PLACEHOLDER_LIGHT,
   },
   {
     name: "Chœur Indigo",
@@ -62,7 +66,7 @@ const ARTISTS = [
     bio: "Duo voix/guitare aux harmonies douces et mélancoliques.",
     tags: ["acoustique", "indie", "voix"],
     link: "#",
-    img: "../assets/img/artist8.xcf",
+    img: ARTIST_PLACEHOLDER_DARK,
   },
 
   {
@@ -71,7 +75,7 @@ const ARTISTS = [
     bio: "Objets du quotidien sculptés dans des essences locales.",
     tags: ["bois", "fait-main", "utilitaire"],
     link: "#",
-    img: "../assets/img/artist9.xcf",
+    img: ARTIST_PLACEHOLDER_ALT,
   },
   {
     name: "Studio Fractal",
@@ -79,7 +83,7 @@ const ARTISTS = [
     bio: "Expérimentations modulaires entre bruit, rythme et mélodie.",
     tags: ["modulaire", "expérimental", "synthé"],
     link: "#",
-    img: "../assets/img/artist10.xcf",
+    img: ARTIST_PLACEHOLDER_LIGHT,
   },
   {
     name: "Pixel & Papier",
@@ -87,7 +91,7 @@ const ARTISTS = [
     bio: "Illustrations colorées mêlant digital et crayon traditionnel.",
     tags: ["digital", "sketch", "couleur"],
     link: "#",
-    img: "../assets/img/artist11.xcf",
+    img: ARTIST_PLACEHOLDER_DARK,
   },
   {
     name: "Nuit Chromatique",
@@ -95,7 +99,7 @@ const ARTISTS = [
     bio: "Sets drum & bass énergiques pour les noctambules.",
     tags: ["drum-and-bass", "dj-set", "énergie"],
     link: "#",
-    img: "../assets/img/artist12.xcf",
+    img: ARTIST_PLACEHOLDER_ALT,
   },
 
   {
@@ -104,7 +108,7 @@ const ARTISTS = [
     bio: "Séries photo argentiques sur la nuit en ville.",
     tags: ["argentique", "urbain", "noir-et-blanc"],
     link: "#",
-    img: "../assets/img/artist13.xcf",
+    img: ARTIST_PLACEHOLDER_LIGHT,
   },
   {
     name: "Café Réverb",
@@ -112,7 +116,7 @@ const ARTISTS = [
     bio: "Chill hop et downtempo pour une ambiance cosy.",
     tags: ["chillhop", "downtempo", "background"],
     link: "#",
-    img: "../assets/img/artist14.xcf",
+    img: ARTIST_PLACEHOLDER_DARK,
   },
   {
     name: "Club Pixelwave",
@@ -120,7 +124,7 @@ const ARTISTS = [
     bio: "Electro-pop lumineuse inspirée des jeux vidéo et du rétro-futur.",
     tags: ["electro-pop", "chiptune", "live"],
     link: "#",
-    img: "../assets/img/artist15.xcf",
+    img: ARTIST_PLACEHOLDER_ALT,
   },
   {
     name: "Orage Doux",
@@ -128,7 +132,7 @@ const ARTISTS = [
     bio: "Post-rock instrumental aux montées lentes et intenses.",
     tags: ["post-rock", "instrumental", "guitare"],
     link: "#",
-    img: "../assets/img/artist16.xcf",
+    img: ARTIST_PLACEHOLDER_LIGHT,
   },
 ];
 
