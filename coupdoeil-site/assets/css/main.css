@@ -3,7 +3,7 @@
 
   /* Palette principale */
   --hue-primary: #d64f59;
-  --hue-secondary: #5f7cf7;
+  --hue-secondary: #e8879b;
   --hue-accent: #f6ae2d;
   --hue-contrast: #1fa387;
 
@@ -28,7 +28,7 @@
   --color-secondary-strong: color-mix(
     in srgb,
     var(--hue-secondary) 80%,
-    #1b2a75
+    #7a1f35
   );
   --color-accent: var(--hue-accent);
   --color-accent-strong: color-mix(in srgb, var(--hue-accent) 80%, #7a3c00);
@@ -100,9 +100,9 @@
     color-mix(in srgb, var(--color-primary) 28%, transparent);
 
   /* Effets */
-  --glow-1: color-mix(in srgb, var(--color-primary) 24%, transparent);
-  --glow-2: color-mix(in srgb, var(--color-secondary) 18%, transparent);
-  --glow-3: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  --glow-1: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  --glow-2: color-mix(in srgb, var(--color-secondary) 10%, transparent);
+  --glow-3: color-mix(in srgb, var(--color-accent) 10%, transparent);
   --shadow-soft: 0 12px 36px rgba(0, 0, 0, 0.06);
   --shadow-strong: 0 18px 46px rgba(0, 0, 0, 0.12);
   --shadow-overlay: 0 16px 44px rgba(0, 0, 0, 0.22);
@@ -173,9 +173,9 @@
     var(--color-primary) 22%,
     var(--color-surface)
   );
-  --glow-1: color-mix(in srgb, var(--color-primary) 16%, transparent);
-  --glow-2: color-mix(in srgb, var(--color-secondary) 14%, transparent);
-  --glow-3: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  --glow-1: color-mix(in srgb, var(--color-primary) 8%, transparent);
+  --glow-2: color-mix(in srgb, var(--color-secondary) 6%, transparent);
+  --glow-3: color-mix(in srgb, var(--color-accent) 6%, transparent);
   --shadow-soft: 0 12px 36px rgba(0, 0, 0, 0.36);
   --shadow-strong: 0 18px 46px rgba(0, 0, 0, 0.48);
   --color-alert: color-mix(
@@ -243,6 +243,18 @@ body::after {
   background: radial-gradient(circle at 18% 12%, var(--glow-1), transparent 30%),
     radial-gradient(circle at 78% 20%, var(--glow-2), transparent 32%),
     radial-gradient(circle at 20% 72%, var(--glow-3), transparent 38%),
+    linear-gradient(to right,
+      color-mix(in srgb, var(--color-primary) 22%, transparent) 0%,
+      transparent 5%,
+      transparent 95%,
+      color-mix(in srgb, var(--color-primary) 22%, transparent) 100%
+    ),
+    linear-gradient(to bottom,
+      color-mix(in srgb, var(--color-primary) 18%, transparent) 0%,
+      transparent 3%,
+      transparent 97%,
+      color-mix(in srgb, var(--color-primary) 18%, transparent) 100%
+    ),
     linear-gradient(
       180deg,
       color-mix(in srgb, var(--color-bg) 68%, transparent) 0%,
@@ -358,6 +370,7 @@ header {
   transform: scale(2.5);
   transform-origin: center center;
   margin: 0 auto;
+  border-radius: 0;
 }
 
 .logo-img--dark {
@@ -419,14 +432,14 @@ nav {
   padding: 10px 12px;
   border-radius: 999px;
   border: 1px solid var(--color-border);
-  background: color-mix(in srgb, #eeeeee 75%, var(--color-surface));
+  background: color-mix(in srgb, #f5eded 75%, var(--color-surface));
   color: var(--color-text);
   cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 
 :root[data-theme="dark"] .theme-toggle {
-  background: color-mix(in srgb, #eeeeee 55%, var(--color-surface));
+  background: color-mix(in srgb, #f5eded 55%, var(--color-surface));
 }
 
 .theme-toggle__icon {
@@ -437,7 +450,7 @@ nav {
 
 .theme-toggle:hover,
 .theme-toggle:focus-visible {
-  background: color-mix(in srgb, #f5f5f5 85%, var(--color-surface));
+  background: color-mix(in srgb, #f5eded 85%, var(--color-surface));
   transform: translateY(-1px);
 }
 
@@ -785,18 +798,13 @@ main {
   text-align: center;
   padding: var(--spacing);
   border-radius: var(--radius);
-  border: 2px dashed
-    color-mix(in srgb, var(--color-secondary) 50%, var(--color-border));
+  border: 1.5px dashed
+    color-mix(in srgb, var(--color-secondary) 35%, var(--color-border));
   background: linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--color-secondary) 10%, var(--color-surface)) 0%,
-      color-mix(in srgb, var(--color-accent) 12%, var(--color-surface)) 100%
-    ),
-    repeating-linear-gradient(
-      135deg,
-      transparent 0 12px,
-      color-mix(in srgb, var(--color-primary) 12%, transparent) 12px 24px
-    );
+    135deg,
+    color-mix(in srgb, var(--color-secondary) 8%, var(--color-surface)) 0%,
+    color-mix(in srgb, var(--color-accent) 10%, var(--color-surface)) 100%
+  );
   color: var(--color-muted);
   text-transform: uppercase;
   font-weight: 800;
@@ -1063,8 +1071,8 @@ main {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--spacing);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
 }
 
 .card {
@@ -1081,7 +1089,7 @@ main {
 .card:hover,
 .card:focus-within {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-strong);
+  box-shadow: var(--shadow-strong), 0 0 20px color-mix(in srgb, var(--color-primary) 12%, transparent);
   border-color: var(--color-primary);
 }
 
@@ -1175,12 +1183,9 @@ main {
   gap: 6px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: linear-gradient(
-    120deg,
-    var(--tone-primary-soft),
-    var(--tone-secondary-soft)
-  );
-  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 18%, var(--color-surface));
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, var(--color-border));
+  color: var(--color-primary-strong);
   font-weight: 800;
   font-size: 0.86rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1205,22 +1210,40 @@ main {
   font-weight: 700;
   font-size: var(--text-sm);
   border: 1px solid
-    color-mix(in srgb, var(--color-secondary) 26%, var(--color-border));
-}
-
-.artist-card img {
-  height: 190px;
-  object-fit: cover;
-  width: 100%;
-  transition: transform 0.3s ease;
-}
-
-.artist-card:hover img {
-  transform: scale(1.05);
+    color-mix(in srgb, var(--color-secondary) 40%, var(--color-border));
 }
 
 .artist-card {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: 0;
+}
+
+.artist-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius) var(--radius) 0 0;
+  transition: transform 0.3s ease;
+}
+
+.artist-card:hover img {
+  transform: scale(1.03);
+}
+
+.artist-card h3,
+.artist-card p,
+.artist-card .artist-meta,
+.artist-card .tags,
+.artist-card > a {
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+}
+
+.artist-card > :last-child {
+  padding-bottom: var(--spacing);
 }
 
 .event-photo {
@@ -1302,8 +1325,15 @@ main {
   min-height: 1.4em;
 }
 
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius);
+}
+
 .table-simple {
   width: 100%;
+  min-width: 480px;
   border-collapse: collapse;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -1380,7 +1410,7 @@ main {
   height: 108px;
   object-fit: contain;
   border-radius: var(--radius);
-  background: white;
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-soft);
   padding: 8px;
@@ -1432,6 +1462,58 @@ main {
   padding-left: 20px;
   color: var(--color-text);
   margin-left: 35px;
+}
+
+.partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+  color: var(--color-muted);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  min-width: 180px;
+}
+
+.partner-logo-link:hover,
+.partner-logo-link:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--color-primary);
+}
+
+.partner-logo {
+  height: 80px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+}
+
+.partner-logo--dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .partner-logo--light {
+  display: none;
+}
+
+:root[data-theme="dark"] .partner-logo--dark {
+  display: block;
 }
 
 .banner.notice {
@@ -1507,6 +1589,13 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--spacing);
+  margin-top: var(--spacing);
+}
+
+.legal-columns .card {
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .legal-list {
@@ -1524,6 +1613,8 @@ main {
   margin: 0 0 var(--spacing-sm);
   color: var(--color-muted);
   line-height: 1.5;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .legal-note {

@@ -1,143 +1,53 @@
-const ARTIST_PLACEHOLDER_LIGHT = "../assets/img/banner/bg-joy-light.svg";
-const ARTIST_PLACEHOLDER_DARK = "../assets/img/banner/bg-joy-dark.svg";
-const ARTIST_PLACEHOLDER_ALT = "../assets/img/hero-banner.svg";
-
 const ARTISTS = [
   {
-    name: "Atelier Sel & Terre",
-    category: "ceramique",
-    bio: "Petites séries d’objets en grès chamotté.",
-    tags: ["grès", "utilitaire"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_LIGHT,
-  },
-  {
-    name: "Nébuleuse Sonore",
-    category: "musique",
-    bio: "Live ambient et textures électroniques pour voyages introspectifs.",
-    tags: ["ambient", "electro", "live"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_DARK,
-  },
-  {
-    name: "Studio Lune Noire",
+    name: "Leelou",
     category: "illustration",
-    bio: "Affiches oniriques inspirées de la nuit et des néons urbains.",
-    tags: ["affiche", "onirique", "néon"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_ALT,
+    bio: "Concept artiste et illustratrice, Leelou crée des univers colorés et expressifs mêlant personnages et émotions.",
+    tags: ["concept art", "illustration"],
+    link: "https://www.instagram.com/leeloush__/",
+    img: "assets/img/artists/Leelou/Leelou.jpg",
   },
   {
-    name: "Beat Bunker",
-    category: "musique",
-    bio: "Beats hip-hop lo-fi produits en direct sur pad.",
-    tags: ["lofi", "hip-hop", "beatmaking"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_LIGHT,
-  },
-
-  {
-    name: "Ciel Brodé",
-    category: "textile",
-    bio: "Broderies fines autour des constellations et des mythes.",
-    tags: ["broderie", "constellation", "slow-art"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_DARK,
+    name: "Atelier Maple",
+    category: "artisanat",
+    bio: "Créatrice de bougies artisanales aux parfums soigneusement composés, Atelier Maple propose des pièces uniques coulées à la main.",
+    tags: ["bougies", "fait main"],
+    link: "https://www.instagram.com/bougies_atelier_maple/",
+    img: "assets/img/artists/AtelierMaple/Atelier_maple.jpg",
   },
   {
-    name: "Lune de Vinyl",
-    category: "musique",
-    bio: "Sélection vinyle house & disco pour danser toute la soirée.",
-    tags: ["dj-set", "vinyle", "house"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_ALT,
-  },
-  {
-    name: "Mains d’Encre",
-    category: "tatouage",
-    bio: "Flashs graphiques inspirés de la nature et du cyberpunk.",
-    tags: ["flash", "noir-et-gris", "graphique"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_LIGHT,
-  },
-  {
-    name: "Chœur Indigo",
-    category: "musique",
-    bio: "Duo voix/guitare aux harmonies douces et mélancoliques.",
-    tags: ["acoustique", "indie", "voix"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_DARK,
-  },
-
-  {
-    name: "Atelier Brut Bois",
-    category: "bois",
-    bio: "Objets du quotidien sculptés dans des essences locales.",
-    tags: ["bois", "fait-main", "utilitaire"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_ALT,
-  },
-  {
-    name: "Studio Fractal",
-    category: "musique",
-    bio: "Expérimentations modulaires entre bruit, rythme et mélodie.",
-    tags: ["modulaire", "expérimental", "synthé"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_LIGHT,
-  },
-  {
-    name: "Pixel & Papier",
+    name: "Aela Byrinthe",
     category: "illustration",
-    bio: "Illustrations colorées mêlant digital et crayon traditionnel.",
-    tags: ["digital", "sketch", "couleur"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_DARK,
+    bio: "Illustratrice engagée, Aela Byrinthe dessine des univers sensibles et inclusifs, entre BD et illustration traditionnelle.",
+    tags: ["illustration", "BD"],
+    link: "https://www.instagram.com/aela.byrinthe/",
+    img: "assets/img/artists/AelaByrinthe/Aela_Byrinthe.jpg",
   },
   {
-    name: "Nuit Chromatique",
-    category: "musique",
-    bio: "Sets drum & bass énergiques pour les noctambules.",
-    tags: ["drum-and-bass", "dj-set", "énergie"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_ALT,
-  },
-
-  {
-    name: "Météore Studio",
-    category: "photo",
-    bio: "Séries photo argentiques sur la nuit en ville.",
-    tags: ["argentique", "urbain", "noir-et-blanc"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_LIGHT,
+    name: "Petit bout de goût",
+    category: "bijoux",
+    bio: "Créatrice de micro-bijoux gourmands faits main en pâte polymère : colliers, boucles d'oreilles et breloques qui croquent la vie.",
+    tags: ["micro-bijoux", "fait main"],
+    link: "https://www.instagram.com/petit.bout.de.gout/",
+    img: "assets/img/artists/PetitBoutDeGout/Petit_bout-de-gout.jpg",
   },
   {
-    name: "Café Réverb",
-    category: "musique",
-    bio: "Chill hop et downtempo pour une ambiance cosy.",
-    tags: ["chillhop", "downtempo", "background"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_DARK,
-  },
-  {
-    name: "Club Pixelwave",
-    category: "musique",
-    bio: "Electro-pop lumineuse inspirée des jeux vidéo et du rétro-futur.",
-    tags: ["electro-pop", "chiptune", "live"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_ALT,
-  },
-  {
-    name: "Orage Doux",
-    category: "musique",
-    bio: "Post-rock instrumental aux montées lentes et intenses.",
-    tags: ["post-rock", "instrumental", "guitare"],
-    link: "#",
-    img: ARTIST_PLACEHOLDER_LIGHT,
+    name: "Luzartwork",
+    category: "peinture",
+    bio: "Peintre et illustratrice, Luzartwork réalise des toiles et prints aux couleurs vibrantes, entre aquarelle, acrylique et illustrations oniriques.",
+    tags: ["peinture", "illustration"],
+    link: "https://www.instagram.com/luzartwork/",
+    img: "assets/img/artists/Luzartwork/Luzartwork.jpg",
   },
 ];
 
 (() => {
   const sanitize = (text) => text.replace(/[<>]/g, "");
+
+  /* Detect base path: pages/ needs "../", root needs "" */
+  const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
+
+  const resolveImg = (img) => basePath + img;
 
   const emptyState = () => {
     const wrapper = document.createElement("div");
@@ -159,19 +69,17 @@ const ARTISTS = [
       const card = document.createElement("article");
       card.className = "card artist-card";
       card.innerHTML = `
-			<img src="${sanitize(artist.img)}" alt="Portrait de ${sanitize(
-        artist.name
-      )}" loading="lazy">
-			<h3>${sanitize(artist.name)}</h3>
-			<div class="artist-meta">
-			<span class="badge">${sanitize(artist.category)}</span>
-			<a href="${sanitize(artist.link)}" rel="noopener">Portfolio</a>
-			</div>
-			<p>${sanitize(artist.bio)}</p>
-			<div class="tags">${artist.tags
-        .map((tag) => `<span class="tag">${sanitize(tag)}</span>`)
-        .join("")}</div>
-			`;
+        <img src="${sanitize(resolveImg(artist.img))}" alt="Portrait de ${sanitize(artist.name)}" loading="lazy">
+        <h3>${sanitize(artist.name)}</h3>
+        <div class="artist-meta">
+          <span class="badge">${sanitize(artist.category)}</span>
+          <a href="${sanitize(artist.link)}" target="_blank" rel="noopener">Instagram</a>
+        </div>
+        <p>${sanitize(artist.bio)}</p>
+        <div class="tags">${artist.tags
+          .map((tag) => `<span class="tag">${sanitize(tag)}</span>`)
+          .join("")}</div>
+      `;
       container.appendChild(card);
     });
   };
@@ -209,7 +117,6 @@ const ARTISTS = [
     const container = document.querySelector("[data-featured-artists]");
     if (!container) return;
 
-    // Take first 3 artists for featured section on homepage
     const featured = ARTISTS.slice(0, 3);
     container.innerHTML = "";
 
@@ -217,14 +124,11 @@ const ARTISTS = [
       const card = document.createElement("div");
       card.className = "card artist-card";
       card.innerHTML = `
-        <div class="event-placeholder event-placeholder--venue" role="img" aria-label="Portrait de ${sanitize(artist.name)}">
-          <span>Portrait artiste</span>
-          <span class="event-placeholder__note">📸 Image à venir</span>
-        </div>
+        <img src="${sanitize(resolveImg(artist.img))}" alt="Portrait de ${sanitize(artist.name)}" loading="lazy">
         <h3>${sanitize(artist.name)}</h3>
         <div class="artist-meta">
           <span class="badge">${sanitize(artist.category)}</span>
-          ${artist.tags.slice(0, 2).map(tag => `<span class="tag">${sanitize(tag)}</span>`).join('')}
+          ${artist.tags.slice(0, 2).map((tag) => `<span class="tag">${sanitize(tag)}</span>`).join("")}
         </div>
         <p>${sanitize(artist.bio)}</p>
       `;
