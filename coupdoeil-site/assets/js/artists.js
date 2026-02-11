@@ -205,8 +205,36 @@ const ARTISTS = [
     update();
   };
 
+  const renderFeaturedArtists = () => {
+    const container = document.querySelector("[data-featured-artists]");
+    if (!container) return;
+
+    // Take first 3 artists for featured section on homepage
+    const featured = ARTISTS.slice(0, 3);
+    container.innerHTML = "";
+
+    featured.forEach((artist) => {
+      const card = document.createElement("div");
+      card.className = "card artist-card";
+      card.innerHTML = `
+        <div class="event-placeholder event-placeholder--venue" role="img" aria-label="Portrait de ${sanitize(artist.name)}">
+          <span>Portrait artiste</span>
+          <span class="event-placeholder__note">📸 Image à venir</span>
+        </div>
+        <h3>${sanitize(artist.name)}</h3>
+        <div class="artist-meta">
+          <span class="badge">${sanitize(artist.category)}</span>
+          ${artist.tags.slice(0, 2).map(tag => `<span class="tag">${sanitize(tag)}</span>`).join('')}
+        </div>
+        <p>${sanitize(artist.bio)}</p>
+      `;
+      container.appendChild(card);
+    });
+  };
+
   document.addEventListener("DOMContentLoaded", () => {
     renderArtists(ARTISTS);
     bindFilters();
+    renderFeaturedArtists();
   });
 })();
