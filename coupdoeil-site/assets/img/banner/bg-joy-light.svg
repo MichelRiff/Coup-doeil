@@ -39,7 +39,7 @@
 		<path id="heart" d="M0,-8 C-2,-15 -15,-15 -15,-5 C-15,5 0,15 0,15 C0,15 15,5 15,-5 C15,-15 2,-15 0,-8Z"/>
 	</defs>
 
-	<rect width="1200" height="4800" fill="#fbf6ef"/>
+	<rect width="1200" height="4800" fill="#f5d0dc"/>
 
 	<!-- Soft atmospheric glows -->
 	<circle cx="200" cy="300" r="260" fill="url(#gRed)" opacity="0.22" filter="url(#blurSoft)"/>

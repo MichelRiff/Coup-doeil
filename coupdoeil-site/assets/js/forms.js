@@ -194,17 +194,34 @@
   const handleContactForm = () => {
     const form = document.querySelector('[data-form="contact"]');
     if (!form) return;
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const data = new FormData(form);
-      const subject = secure(data.get("subject"));
+      const name = secure(data.get("name"));
       const email = secure(data.get("email"));
-      if (!subject || !validateEmail(email)) {
-        setStatus(form, "Sujet et email requis pour répondre.", true);
+      const subject = secure(data.get("subject"));
+      const message = secure(data.get("message"));
+      if (!name || !validateEmail(email) || !message) {
+        setStatus(form, "Merci de remplir tous les champs obligatoires.", true);
         return;
       }
-      setStatus(form, "Message reçu ! Nous revenons vers vous rapidement.");
-      form.reset();
+      const payload = { name, email, subject, message };
+      try {
+        setStatus(form, "Envoi en cours, merci de patienter...");
+        await sendToEndpoint(form, payload);
+        form.reset();
+        setStatus(
+          form,
+          "Message envoyé ! Nous revenons vers vous sous 48h ouvrées."
+        );
+      } catch (error) {
+        console.error("Contact form submission failed", error);
+        setStatus(
+          form,
+          "Impossible d'envoyer le message. Merci de réessayer dans un instant.",
+          true
+        );
+      }
     });
   };
 

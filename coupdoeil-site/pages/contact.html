@@ -88,30 +88,25 @@
           </p>
         </div>
         <div class="hero-visual">
-          <p class="highlight">
-            Les formulaires sont statiques et ne transmettent aucune donnée.
-            Utilisez vos vraies informations uniquement si vous souhaitez être
-            recontacté.
-          </p>
         </div>
       </section>
       <section class="section">
         <div class="section-header">
           <h2>Formulaire de contact</h2>
         </div>
-        <form class="form-grid">
+        <form class="form-grid" data-form="contact" data-endpoint="https://formsubmit.co/ajax/eventcoupdoeil@gmail.com" data-subject="Contact – Coup d'Oeil">
           <div class="form-group">
             <label for="name">Nom complet</label>
-            <input id="name" type="text" placeholder="Votre nom" />
+            <input id="name" name="name" type="text" placeholder="Votre nom" required />
             <p class="helper">Indiquez l'équipe ou le rôle le cas échéant.</p>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" type="email" placeholder="votrenom@mail.fr" />
+            <input id="email" name="email" type="email" placeholder="votrenom@mail.fr" required />
           </div>
           <div class="form-group">
             <label for="topic">Sujet</label>
-            <select id="topic">
+            <select id="topic" name="subject">
               <option>Question générale</option>
               <option>Partenariat</option>
               <option>Presse</option>
@@ -123,13 +118,15 @@
             <label for="message">Message</label>
             <textarea
               id="message"
+              name="message"
               rows="4"
               placeholder="Décrivez votre besoin"
+              required
             ></textarea>
           </div>
           <div class="form-actions">
-            <button class="btn" type="button">Envoyer</button>
-            <p class="helper">Réponse sous 48h ouvrées.</p>
+            <button class="btn" type="submit">Envoyer</button>
+            <p data-status class="helper" aria-live="polite">Réponse sous 48h ouvrées.</p>
           </div>
         </form>
       </section>
@@ -171,5 +168,6 @@
       <div class="footer-bottom">© 2026 Coup d'Oeil · Événement.</div>
     </footer>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/forms.js"></script>
   </body>
 </html>

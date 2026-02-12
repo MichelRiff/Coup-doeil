@@ -97,21 +97,20 @@
       data-hero-banner
       aria-label="Ambiance artisanale du marché Coup d'Oeil"
     >
-      <div class="hero-banner__content">
-        <div class="hero-banner__logo">
-          <img
-            src="assets/img/logo/bg_logo_light.png"
-            alt="Coup d'Oeil"
-            class="logo-imgw logo-img--light"
-            decoding="async"
-          />
-          <img
-            src="assets/img/logo/bg_logo_dark.png"
-            alt=""
-            class="logo-imgw logo-img--dark"
-            aria-hidden="true"
-            decoding="async"
-          />
+      <div class="hero-banner__logo">
+        <img
+          src="assets/img/logo/nobg_logo_light.png"
+          alt="Coup d'Oeil"
+          class="logo-imgw logo-img--light"
+          decoding="async"
+        />
+        <img
+          src="assets/img/logo/nobg_logo_dark.png"
+          alt=""
+          class="logo-imgw logo-img--dark"
+          aria-hidden="true"
+          decoding="async"
+        />
       </div>
     </section>
     <main id="contenu">
@@ -134,11 +133,12 @@
             </p>
           </div>
           <div class="card">
-            <h3>L’inclusivité avant tout</h3>
+            <h3>L'inclusivité avant tout</h3>
             <p>
               On souhaite faire de notre évènement une safe place pour toute personne en mettant en avant des œuvres représentant tout types de personnes (Handicap, POC, racisées, LGBTQIA+ …)
             </p>
           </div>
+        </div>
       </section>
       <section class="section" id="objectifs">
         <div class="section-header">
@@ -186,7 +186,6 @@
             <a class="btn secondary" href="pages/artists.html">Voir la galerie</a>
           </div>
           <div class="card-grid" data-featured-artists>
-            <!-- Artists loaded dynamically from artists.js -->
           </div>
       </section>
       <section class="section" id="faq">
@@ -194,7 +193,7 @@
           <h2>FAQ</h2>
           <a href="pages/contact.html" class="btn secondary">Contactez l'équipe</a>
         </div>
-        <div class="card faq-stack">
+        <div class="faq-stack">
           <div class="faq-block">
             <h3>Visiteurs</h3>
             <div class="faq-item">
@@ -228,7 +227,7 @@
           </div>
         </div>
       </section>
-      <!--<section class="section newsletter">
+      <section class="section newsletter">
         <div>
           <h2>Rester informé·e</h2>
           <p>
@@ -236,13 +235,15 @@
             rencontres.
           </p>
         </div>
-        <form data-newsletter>
+        <form data-newsletter data-endpoint="https://assets.mailerlite.com/jsonp/2108799/forms/179186229321925969/subscribe">
           <label for="newsletter-email">Email</label>
-          <input type="email" id="newsletter-email" required />
+          <input type="email" id="newsletter-email" name="fields[email]" required />
+          <input type="hidden" name="ml-submit" value="1" />
+          <input type="hidden" name="anticsrf" value="true" />
           <button class="btn" type="submit">S'inscrire</button>
           <p data-status class="helper" aria-live="polite"></p>
         </form>
-      </section> -->
+      </section>
     </main>
     <footer>
       <div class="footer-content">

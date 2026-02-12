@@ -71,22 +71,41 @@
     const form = document.querySelector("[data-newsletter]");
     if (!form) return;
     const status = form.querySelector("[data-status]");
-    form.addEventListener("submit", (e) => {
+    const endpoint = form.dataset.endpoint;
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const emailInput = form.querySelector('input[type="email"]');
       const email = secureInput(emailInput.value);
       if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
         status.textContent = "Merci de saisir un email valide.";
-        status.className = "error";
+        status.style.color = "#b02b2b";
         emailInput.classList.add("is-invalid");
         return;
       }
-      status.textContent = "Merci ! Vous êtes bien inscrit·e à la newsletter.";
-      status.className = "success";
-      emailInput.classList.remove("is-invalid");
-      emailInput.classList.add("is-valid");
-      localStorage.setItem("coupdoeil_newsletter", email);
-      form.reset();
+      if (!endpoint) return;
+      status.textContent = "Inscription en cours...";
+      status.style.color = "inherit";
+      try {
+        const body = new FormData(form);
+        body.set("fields[email]", email);
+        const response = await fetch(endpoint, {
+          method: "POST",
+          body,
+        });
+        if (!response.ok) throw new Error("send-failed");
+        status.textContent =
+          "Merci ! Vérifiez votre boîte mail pour confirmer votre inscription.";
+        status.style.color = "inherit";
+        emailInput.classList.remove("is-invalid");
+        emailInput.classList.add("is-valid");
+        localStorage.setItem("coupdoeil_newsletter", email);
+        form.reset();
+      } catch (error) {
+        console.error("Newsletter subscription failed", error);
+        status.textContent =
+          "Impossible de vous inscrire pour le moment. Réessayez dans un instant.";
+        status.style.color = "#b02b2b";
+      }
     });
   };
 
